@@ -1,0 +1,709 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7165537D288DF80B00FB64FB /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7165537C288DF80B00FB64FB /* OptionsViewController.swift */; };
+		7165537F288DF86300FB64FB /* NumberOfPlayersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7165537E288DF86300FB64FB /* NumberOfPlayersView.xib */; };
+		71655381288DFD0E00FB64FB /* StartingLifeTotalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71655380288DFD0E00FB64FB /* StartingLifeTotalView.xib */; };
+		71655383288DFE9600FB64FB /* StartingLifeTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655382288DFE9600FB64FB /* StartingLifeTotalView.swift */; };
+		71655385288DFF0700FB64FB /* NumberOfPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655384288DFF0700FB64FB /* NumberOfPlayersView.swift */; };
+		7165538C288E002F00FB64FB /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655388288E002F00FB64FB /* ViewControllerProvider.swift */; };
+		7165538D288E002F00FB64FB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655389288E002F00FB64FB /* MainCoordinator.swift */; };
+		7165538F288E002F00FB64FB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7165538B288E002F00FB64FB /* Coordinator.swift */; };
+		71655391288E0FA900FB64FB /* ThreePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655390288E0FA900FB64FB /* ThreePlayersViewController.swift */; };
+		71655393288E148A00FB64FB /* FivePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655392288E148A00FB64FB /* FivePlayersViewController.swift */; };
+		71655395288E15AC00FB64FB /* SixPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71655394288E15AC00FB64FB /* SixPlayersViewController.swift */; };
+		7175EAF4288C3501009AA437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF3288C3501009AA437 /* AppDelegate.swift */; };
+		7175EAF6288C3501009AA437 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF5288C3501009AA437 /* SceneDelegate.swift */; };
+		7175EAF8288C3501009AA437 /* TwoPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF7288C3501009AA437 /* TwoPlayersViewController.swift */; };
+		7175EAFB288C3501009AA437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7175EAF9288C3501009AA437 /* Main.storyboard */; };
+		7175EAFD288C3504009AA437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7175EAFC288C3504009AA437 /* Assets.xcassets */; };
+		7175EB00288C3504009AA437 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7175EAFE288C3504009AA437 /* LaunchScreen.storyboard */; };
+		7175EB0B288C3504009AA437 /* MTG_Life_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB0A288C3504009AA437 /* MTG_Life_TrackerTests.swift */; };
+		7175EB15288C3504009AA437 /* MTG_Life_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB14288C3504009AA437 /* MTG_Life_TrackerUITests.swift */; };
+		7175EB17288C3504009AA437 /* MTG_Life_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB16288C3504009AA437 /* MTG_Life_TrackerUITestsLaunchTests.swift */; };
+		7175EB24288C36F7009AA437 /* LifeTrackerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7175EB23288C36F7009AA437 /* LifeTrackerView.xib */; };
+		7175EB26288C376D009AA437 /* LifeTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB25288C376D009AA437 /* LifeTrackerView.swift */; };
+		7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7175EB27288C54AA009AA437 /* OptionsView.xib */; };
+		7175EB2A288C54B9009AA437 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB29288C54B9009AA437 /* OptionsView.swift */; };
+		7175EB2C288C70EB009AA437 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB2B288C70EB009AA437 /* PlayersViewController.swift */; };
+		7175EB2E288C75C7009AA437 /* FourPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB2D288C75C7009AA437 /* FourPlayerViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7175EB07288C3504009AA437 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7175EAE8288C3501009AA437 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7175EAEF288C3501009AA437;
+			remoteInfo = "MTG Life Tracker";
+		};
+		7175EB11288C3504009AA437 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7175EAE8288C3501009AA437 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7175EAEF288C3501009AA437;
+			remoteInfo = "MTG Life Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7165537C288DF80B00FB64FB /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		7165537E288DF86300FB64FB /* NumberOfPlayersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NumberOfPlayersView.xib; sourceTree = "<group>"; };
+		71655380288DFD0E00FB64FB /* StartingLifeTotalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StartingLifeTotalView.xib; sourceTree = "<group>"; };
+		71655382288DFE9600FB64FB /* StartingLifeTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingLifeTotalView.swift; sourceTree = "<group>"; };
+		71655384288DFF0700FB64FB /* NumberOfPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPlayersView.swift; sourceTree = "<group>"; };
+		71655388288E002F00FB64FB /* ViewControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
+		71655389288E002F00FB64FB /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		7165538B288E002F00FB64FB /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		71655390288E0FA900FB64FB /* ThreePlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreePlayersViewController.swift; sourceTree = "<group>"; };
+		71655392288E148A00FB64FB /* FivePlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivePlayersViewController.swift; sourceTree = "<group>"; };
+		71655394288E15AC00FB64FB /* SixPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixPlayersViewController.swift; sourceTree = "<group>"; };
+		7175EAF0288C3501009AA437 /* MTG Life Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Life Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7175EAF3288C3501009AA437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7175EAF5288C3501009AA437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
+		7175EAF7288C3501009AA437 /* TwoPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersViewController.swift; sourceTree = "<group>"; };
+		7175EAFA288C3501009AA437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7175EAFC288C3504009AA437 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7175EAFF288C3504009AA437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7175EB01288C3504009AA437 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7175EB06288C3504009AA437 /* MTG Life TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MTG Life TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7175EB0A288C3504009AA437 /* MTG_Life_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_Life_TrackerTests.swift; sourceTree = "<group>"; };
+		7175EB10288C3504009AA437 /* MTG Life TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MTG Life TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7175EB14288C3504009AA437 /* MTG_Life_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_Life_TrackerUITests.swift; sourceTree = "<group>"; };
+		7175EB16288C3504009AA437 /* MTG_Life_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTG_Life_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7175EB23288C36F7009AA437 /* LifeTrackerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifeTrackerView.xib; sourceTree = "<group>"; };
+		7175EB25288C376D009AA437 /* LifeTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeTrackerView.swift; sourceTree = "<group>"; };
+		7175EB27288C54AA009AA437 /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
+		7175EB29288C54B9009AA437 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		7175EB2B288C70EB009AA437 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		7175EB2D288C75C7009AA437 /* FourPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlayerViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7175EAED288C3501009AA437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7175EB03288C3504009AA437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7175EB0D288C3504009AA437 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71655379288DF79700FB64FB /* PlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				7175EB29288C54B9009AA437 /* OptionsView.swift */,
+				7175EB27288C54AA009AA437 /* OptionsView.xib */,
+				7175EB25288C376D009AA437 /* LifeTrackerView.swift */,
+				7175EB23288C36F7009AA437 /* LifeTrackerView.xib */,
+			);
+			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		7165537A288DF7AF00FB64FB /* Player View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7175EB2B288C70EB009AA437 /* PlayersViewController.swift */,
+				7175EAF7288C3501009AA437 /* TwoPlayersViewController.swift */,
+				71655390288E0FA900FB64FB /* ThreePlayersViewController.swift */,
+				7175EB2D288C75C7009AA437 /* FourPlayerViewController.swift */,
+				71655392288E148A00FB64FB /* FivePlayersViewController.swift */,
+				71655394288E15AC00FB64FB /* SixPlayersViewController.swift */,
+			);
+			path = "Player View Controllers";
+			sourceTree = "<group>";
+		};
+		7165537B288DF7DD00FB64FB /* Options View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7165537C288DF80B00FB64FB /* OptionsViewController.swift */,
+				71655382288DFE9600FB64FB /* StartingLifeTotalView.swift */,
+				71655380288DFD0E00FB64FB /* StartingLifeTotalView.xib */,
+				71655384288DFF0700FB64FB /* NumberOfPlayersView.swift */,
+				7165537E288DF86300FB64FB /* NumberOfPlayersView.xib */,
+			);
+			path = "Options View Controller";
+			sourceTree = "<group>";
+		};
+		71655387288E002F00FB64FB /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				7175EAF3288C3501009AA437 /* AppDelegate.swift */,
+				7175EAF5288C3501009AA437 /* SceneDelegate.swift */,
+				7165538B288E002F00FB64FB /* Coordinator.swift */,
+				71655389288E002F00FB64FB /* MainCoordinator.swift */,
+				71655388288E002F00FB64FB /* ViewControllerProvider.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		7175EAE7288C3501009AA437 = {
+			isa = PBXGroup;
+			children = (
+				7175EAF2288C3501009AA437 /* MTG Life Tracker */,
+				7175EB09288C3504009AA437 /* MTG Life TrackerTests */,
+				7175EB13288C3504009AA437 /* MTG Life TrackerUITests */,
+				7175EAF1288C3501009AA437 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7175EAF1288C3501009AA437 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7175EAF0288C3501009AA437 /* MTG Life Tracker.app */,
+				7175EB06288C3504009AA437 /* MTG Life TrackerTests.xctest */,
+				7175EB10288C3504009AA437 /* MTG Life TrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7175EAF2288C3501009AA437 /* MTG Life Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				71655387288E002F00FB64FB /* Navigation */,
+				71655379288DF79700FB64FB /* PlayerView */,
+				7165537A288DF7AF00FB64FB /* Player View Controllers */,
+				7165537B288DF7DD00FB64FB /* Options View Controller */,
+				7175EAF9288C3501009AA437 /* Main.storyboard */,
+				7175EAFC288C3504009AA437 /* Assets.xcassets */,
+				7175EAFE288C3504009AA437 /* LaunchScreen.storyboard */,
+				7175EB01288C3504009AA437 /* Info.plist */,
+			);
+			path = "MTG Life Tracker";
+			sourceTree = "<group>";
+		};
+		7175EB09288C3504009AA437 /* MTG Life TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7175EB0A288C3504009AA437 /* MTG_Life_TrackerTests.swift */,
+			);
+			path = "MTG Life TrackerTests";
+			sourceTree = "<group>";
+		};
+		7175EB13288C3504009AA437 /* MTG Life TrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7175EB14288C3504009AA437 /* MTG_Life_TrackerUITests.swift */,
+				7175EB16288C3504009AA437 /* MTG_Life_TrackerUITestsLaunchTests.swift */,
+			);
+			path = "MTG Life TrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7175EAEF288C3501009AA437 /* MTG Life Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7175EB1A288C3504009AA437 /* Build configuration list for PBXNativeTarget "MTG Life Tracker" */;
+			buildPhases = (
+				7175EAEC288C3501009AA437 /* Sources */,
+				7175EAED288C3501009AA437 /* Frameworks */,
+				7175EAEE288C3501009AA437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MTG Life Tracker";
+			productName = "MTG Life Tracker";
+			productReference = 7175EAF0288C3501009AA437 /* MTG Life Tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7175EB05288C3504009AA437 /* MTG Life TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7175EB1D288C3504009AA437 /* Build configuration list for PBXNativeTarget "MTG Life TrackerTests" */;
+			buildPhases = (
+				7175EB02288C3504009AA437 /* Sources */,
+				7175EB03288C3504009AA437 /* Frameworks */,
+				7175EB04288C3504009AA437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7175EB08288C3504009AA437 /* PBXTargetDependency */,
+			);
+			name = "MTG Life TrackerTests";
+			productName = "MTG Life TrackerTests";
+			productReference = 7175EB06288C3504009AA437 /* MTG Life TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7175EB0F288C3504009AA437 /* MTG Life TrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7175EB20288C3504009AA437 /* Build configuration list for PBXNativeTarget "MTG Life TrackerUITests" */;
+			buildPhases = (
+				7175EB0C288C3504009AA437 /* Sources */,
+				7175EB0D288C3504009AA437 /* Frameworks */,
+				7175EB0E288C3504009AA437 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7175EB12288C3504009AA437 /* PBXTargetDependency */,
+			);
+			name = "MTG Life TrackerUITests";
+			productName = "MTG Life TrackerUITests";
+			productReference = 7175EB10288C3504009AA437 /* MTG Life TrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7175EAE8288C3501009AA437 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7175EAEF288C3501009AA437 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					7175EB05288C3504009AA437 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7175EAEF288C3501009AA437;
+					};
+					7175EB0F288C3504009AA437 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7175EAEF288C3501009AA437;
+					};
+				};
+			};
+			buildConfigurationList = 7175EAEB288C3501009AA437 /* Build configuration list for PBXProject "MTG Life Tracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7175EAE7288C3501009AA437;
+			productRefGroup = 7175EAF1288C3501009AA437 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7175EAEF288C3501009AA437 /* MTG Life Tracker */,
+				7175EB05288C3504009AA437 /* MTG Life TrackerTests */,
+				7175EB0F288C3504009AA437 /* MTG Life TrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7175EAEE288C3501009AA437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */,
+				7175EB00288C3504009AA437 /* LaunchScreen.storyboard in Resources */,
+				71655381288DFD0E00FB64FB /* StartingLifeTotalView.xib in Resources */,
+				7175EAFD288C3504009AA437 /* Assets.xcassets in Resources */,
+				7165537F288DF86300FB64FB /* NumberOfPlayersView.xib in Resources */,
+				7175EAFB288C3501009AA437 /* Main.storyboard in Resources */,
+				7175EB24288C36F7009AA437 /* LifeTrackerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7175EB04288C3504009AA437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7175EB0E288C3504009AA437 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7175EAEC288C3501009AA437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7175EAF8288C3501009AA437 /* TwoPlayersViewController.swift in Sources */,
+				7165538D288E002F00FB64FB /* MainCoordinator.swift in Sources */,
+				7165537D288DF80B00FB64FB /* OptionsViewController.swift in Sources */,
+				7165538C288E002F00FB64FB /* ViewControllerProvider.swift in Sources */,
+				71655393288E148A00FB64FB /* FivePlayersViewController.swift in Sources */,
+				7175EAF4288C3501009AA437 /* AppDelegate.swift in Sources */,
+				7175EAF6288C3501009AA437 /* SceneDelegate.swift in Sources */,
+				7165538F288E002F00FB64FB /* Coordinator.swift in Sources */,
+				7175EB2A288C54B9009AA437 /* OptionsView.swift in Sources */,
+				71655391288E0FA900FB64FB /* ThreePlayersViewController.swift in Sources */,
+				7175EB26288C376D009AA437 /* LifeTrackerView.swift in Sources */,
+				7175EB2C288C70EB009AA437 /* PlayersViewController.swift in Sources */,
+				71655395288E15AC00FB64FB /* SixPlayersViewController.swift in Sources */,
+				7175EB2E288C75C7009AA437 /* FourPlayerViewController.swift in Sources */,
+				71655383288DFE9600FB64FB /* StartingLifeTotalView.swift in Sources */,
+				71655385288DFF0700FB64FB /* NumberOfPlayersView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7175EB02288C3504009AA437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7175EB0B288C3504009AA437 /* MTG_Life_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7175EB0C288C3504009AA437 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7175EB17288C3504009AA437 /* MTG_Life_TrackerUITestsLaunchTests.swift in Sources */,
+				7175EB15288C3504009AA437 /* MTG_Life_TrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7175EB08288C3504009AA437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7175EAEF288C3501009AA437 /* MTG Life Tracker */;
+			targetProxy = 7175EB07288C3504009AA437 /* PBXContainerItemProxy */;
+		};
+		7175EB12288C3504009AA437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7175EAEF288C3501009AA437 /* MTG Life Tracker */;
+			targetProxy = 7175EB11288C3504009AA437 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7175EAF9288C3501009AA437 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7175EAFA288C3501009AA437 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7175EAFE288C3504009AA437 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7175EAFF288C3504009AA437 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7175EB18288C3504009AA437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7175EB19288C3504009AA437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7175EB1B288C3504009AA437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDR2J889F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MTG Life Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mbruin.MTG-Life-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7175EB1C288C3504009AA437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDR2J889F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MTG Life Tracker/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mbruin.MTG-Life-Tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7175EB1E288C3504009AA437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDR2J889F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mbruin.MTG-Life-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTG Life Tracker.app/MTG Life Tracker";
+			};
+			name = Debug;
+		};
+		7175EB1F288C3504009AA437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDR2J889F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mbruin.MTG-Life-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTG Life Tracker.app/MTG Life Tracker";
+			};
+			name = Release;
+		};
+		7175EB21288C3504009AA437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDR2J889F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mbruin.MTG-Life-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MTG Life Tracker";
+			};
+			name = Debug;
+		};
+		7175EB22288C3504009AA437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TDR2J889F7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "mbruin.MTG-Life-TrackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MTG Life Tracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7175EAEB288C3501009AA437 /* Build configuration list for PBXProject "MTG Life Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7175EB18288C3504009AA437 /* Debug */,
+				7175EB19288C3504009AA437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7175EB1A288C3504009AA437 /* Build configuration list for PBXNativeTarget "MTG Life Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7175EB1B288C3504009AA437 /* Debug */,
+				7175EB1C288C3504009AA437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7175EB1D288C3504009AA437 /* Build configuration list for PBXNativeTarget "MTG Life TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7175EB1E288C3504009AA437 /* Debug */,
+				7175EB1F288C3504009AA437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7175EB20288C3504009AA437 /* Build configuration list for PBXNativeTarget "MTG Life TrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7175EB21288C3504009AA437 /* Debug */,
+				7175EB22288C3504009AA437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7175EAE8288C3501009AA437 /* Project object */;
+}

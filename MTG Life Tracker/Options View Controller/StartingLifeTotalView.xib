@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StartingLifeTotalView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="aKn-M8-peW"/>
+                <outlet property="fourtyButton" destination="Lth-za-mXn" id="8Sw-uk-FWd"/>
+                <outlet property="thirtyButton" destination="HYe-h4-VrJ" id="qjX-nO-PPL"/>
+                <outlet property="twentyButton" destination="J8N-60-fAZ" id="Pl3-jn-Aqo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Life Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KiQ-kv-s9N">
+                    <rect key="frame" x="114" y="178" width="186.5" height="30"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-kL-3XA">
+                    <rect key="frame" x="84.5" y="252" width="245" height="75"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8N-60-fAZ">
+                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="9yg-tl-2u6"/>
+                                <constraint firstAttribute="height" constant="75" id="DC2-nR-Lyq"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="20">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="twentyButtonPress" destination="-1" eventType="primaryActionTriggered" id="eUk-Gn-L0K"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYe-h4-VrJ">
+                            <rect key="frame" x="85" y="0.0" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="EHK-xY-5E9"/>
+                                <constraint firstAttribute="height" constant="75" id="s64-73-aLG"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="30">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="thirtyButtonPress" destination="-1" eventType="primaryActionTriggered" id="hEk-UO-cUH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lth-za-mXn">
+                            <rect key="frame" x="170" y="0.0" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="SVB-ds-Cnr"/>
+                                <constraint firstAttribute="width" constant="75" id="jWO-TZ-Sfa"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="40">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="fortyButtonPress" destination="-1" eventType="primaryActionTriggered" id="bLr-Mi-rea"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="245" id="0LD-YJ-uKl"/>
+                        <constraint firstAttribute="height" constant="75" id="MWY-pW-Sne"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VlS-kL-3XA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="d8o-7A-85I"/>
+                <constraint firstItem="KiQ-kv-s9N" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="euj-rY-wJt"/>
+                <constraint firstItem="VlS-kL-3XA" firstAttribute="top" secondItem="KiQ-kv-s9N" secondAttribute="bottom" constant="44" id="jbz-zN-LtJ"/>
+                <constraint firstItem="KiQ-kv-s9N" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="134" id="sDg-qN-2ot"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
