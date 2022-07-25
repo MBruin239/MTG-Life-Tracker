@@ -27,6 +27,8 @@
 		716553AA288EDAE800FB64FB /* FivePlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716553A9288EDAE800FB64FB /* FivePlayersView.swift */; };
 		716553AC288EDBF200FB64FB /* SixPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716553AB288EDBF200FB64FB /* SixPlayersView.swift */; };
 		716553AE288EDC5900FB64FB /* SixPlayersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716553AD288EDC5900FB64FB /* SixPlayersView.xib */; };
+		716553B1288F115300FB64FB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716553B0288F115300FB64FB /* PlayerView.swift */; };
+		716553B3288F123B00FB64FB /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716553B2288F123B00FB64FB /* PlayerView.xib */; };
 		7175EAF4288C3501009AA437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF3288C3501009AA437 /* AppDelegate.swift */; };
 		7175EAF6288C3501009AA437 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF5288C3501009AA437 /* SceneDelegate.swift */; };
 		7175EAFB288C3501009AA437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7175EAF9288C3501009AA437 /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		716553A9288EDAE800FB64FB /* FivePlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FivePlayersView.swift; sourceTree = "<group>"; };
 		716553AB288EDBF200FB64FB /* SixPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixPlayersView.swift; sourceTree = "<group>"; };
 		716553AD288EDC5900FB64FB /* SixPlayersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SixPlayersView.xib; sourceTree = "<group>"; };
+		716553B0288F115300FB64FB /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		716553B2288F123B00FB64FB /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
 		7175EAF0288C3501009AA437 /* MTG Life Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Life Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7175EAF3288C3501009AA437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7175EAF5288C3501009AA437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 		71655379288DF79700FB64FB /* PlayerView */ = {
 			isa = PBXGroup;
 			children = (
+				716553B0288F115300FB64FB /* PlayerView.swift */,
+				716553B2288F123B00FB64FB /* PlayerView.xib */,
 				7175EB29288C54B9009AA437 /* OptionsView.swift */,
 				7175EB27288C54AA009AA437 /* OptionsView.xib */,
 				7175EB25288C376D009AA437 /* LifeTrackerView.swift */,
@@ -351,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716553B3288F123B00FB64FB /* PlayerView.xib in Resources */,
 				7165539E288ECE9B00FB64FB /* TwoPlayersView.xib in Resources */,
 				7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */,
 				716553AE288EDC5900FB64FB /* SixPlayersView.xib in Resources */,
@@ -404,6 +411,7 @@
 				716553A2288ED72400FB64FB /* ThreePlayersView.swift in Sources */,
 				71655383288DFE9600FB64FB /* StartingLifeTotalView.swift in Sources */,
 				71655385288DFF0700FB64FB /* NumberOfPlayersView.swift in Sources */,
+				716553B1288F115300FB64FB /* PlayerView.swift in Sources */,
 				716553AC288EDBF200FB64FB /* SixPlayersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,8 +9,8 @@ import Foundation
 
 class TwoPlayersView: PlayersView {
     let kCONTENT_XIB_NAME = "TwoPlayersView"
-    @IBOutlet var playerView1: LifeTrackerView!
-    @IBOutlet var playerView2: LifeTrackerView!
+    @IBOutlet var playerView1: PlayerView!
+    @IBOutlet var playerView2: PlayerView!
 
     override func commonInit() {
         super.commonInit()
@@ -20,7 +20,7 @@ class TwoPlayersView: PlayersView {
     
     override func setup() {
         playerView1.transform = playerView1.transform.rotated(by: Double.pi);
-        playerView1.lifeTotal = startingLifeTotal
-        playerView2.lifeTotal = startingLifeTotal
+        playerView1.playerLifeView.lifeTotal = startingLifeTotal
+        playerView2.playerLifeView.lifeTotal = startingLifeTotal
     }
 }

@@ -37,7 +37,7 @@
                                 </view>
                             </subviews>
                         </stackView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-lC-Cbu" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-lC-Cbu" customClass="PlayerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="503" width="414" height="393"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -47,13 +47,13 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEZ-2r-DF8">
-                    <rect key="frame" x="185" y="478" width="44" height="50"/>
+                    <rect key="frame" x="184.5" y="478" width="45.5" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="bT6-ka-3oP"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="bcj-75-Hy9"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled"/>
+                    <buttonConfiguration key="configuration" style="filled" image="gearshape.fill" catalog="system"/>
                     <connections>
                         <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="3Nx-sx-EM1"/>
                     </connections>
@@ -75,6 +75,7 @@
         </view>
     </objects>
     <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

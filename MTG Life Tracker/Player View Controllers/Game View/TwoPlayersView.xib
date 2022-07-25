@@ -23,24 +23,24 @@
                 <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KNn-wK-2ks">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-xH-S0X" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b2b-xH-S0X" customClass="PlayerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="445.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smw-pO-ki0" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="smw-pO-ki0" customClass="PlayerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="450.5" width="414" height="445.5"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6X-u6-HqV">
-                    <rect key="frame" x="185" y="423" width="44" height="50"/>
+                    <rect key="frame" x="184.5" y="423" width="45.5" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="O0J-Ln-hhG"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Rwy-Hq-wnc"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled"/>
+                    <buttonConfiguration key="configuration" style="filled" image="gearshape.fill" catalog="system"/>
                     <connections>
                         <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="c5O-H2-0Em"/>
                     </connections>
@@ -60,6 +60,7 @@
         </view>
     </objects>
     <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

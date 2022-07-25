@@ -63,13 +63,13 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J0-4C-x8I">
-                    <rect key="frame" x="185" y="423" width="44" height="50"/>
+                    <rect key="frame" x="184.5" y="423" width="45.5" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="UjT-bY-VJS"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ni7-zH-tgR"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled"/>
+                    <buttonConfiguration key="configuration" style="filled" image="gearshape.fill" catalog="system"/>
                     <connections>
                         <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="nr6-Jd-QP2"/>
                     </connections>
@@ -90,4 +90,7 @@
             <point key="canvasLocation" x="139" y="121"/>
         </view>
     </objects>
+    <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

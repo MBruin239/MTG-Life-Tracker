@@ -12,12 +12,12 @@ class ThreePlayersView: PlayersView {
     let kCONTENT_XIB_NAME = "ThreePlayersView"
    
     @IBOutlet var player1Parrent: UIView!
-    var playerView1: LifeTrackerView = LifeTrackerView()
+    var playerView1: PlayerView = PlayerView()
     
     @IBOutlet var player2Parrent: UIView!
-    var playerView2: LifeTrackerView = LifeTrackerView()
+    var playerView2: PlayerView = PlayerView()
     
-    @IBOutlet var playerView3: LifeTrackerView!
+    @IBOutlet var playerView3: PlayerView!
 
     override func commonInit() {
         super.commonInit()
@@ -26,9 +26,9 @@ class ThreePlayersView: PlayersView {
     }
     
     override func setup() {
-        playerView1.lifeTotal = startingLifeTotal
-        playerView2.lifeTotal = startingLifeTotal
-        playerView3.lifeTotal = startingLifeTotal
+        playerView1.playerLifeView.lifeTotal = startingLifeTotal
+        playerView2.playerLifeView.lifeTotal = startingLifeTotal
+        playerView3.playerLifeView.lifeTotal = startingLifeTotal
         
         playerView1.rotateViewInView(player1Parrent, rotation: Double.pi*0.5)
         playerView2.rotateViewInView(player2Parrent, rotation: Double.pi*1.5)

@@ -11,9 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
             <connections>
                 <outlet property="bottomButton" destination="PEh-Tv-5w0" id="FWM-zf-Zl7"/>
+                <outlet property="bottomImage" destination="6aU-TG-EI6" id="OOC-8l-aZv"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="3o4-wg-b5b"/>
                 <outlet property="lifeTotalLabel" destination="OPG-zN-uMB" id="FDc-QB-7jV"/>
-                <outlet property="pannableView" destination="pxO-8j-5hY" id="PbI-Jd-LzA"/>
                 <outlet property="topButton" destination="0e9-9h-HEr" id="kT8-fg-b6J"/>
             </connections>
         </placeholder>
@@ -22,72 +22,62 @@
             <rect key="frame" x="0.0" y="0.0" width="450" height="445"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pq4-0b-45M" customClass="OptionsView" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="450" height="445"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxO-8j-5hY">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-0R-iiD">
                     <rect key="frame" x="0.0" y="0.0" width="450" height="445"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-0R-iiD">
-                            <rect key="frame" x="0.0" y="0.0" width="450" height="445"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e9-9h-HEr">
-                                    <rect key="frame" x="0.0" y="0.0" width="450" height="222.5"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="gray"/>
-                                    <connections>
-                                        <action selector="lifeTotalUpActions" destination="-2" eventType="primaryActionTriggered" id="fhW-KX-S0n"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEh-Tv-5w0">
-                                    <rect key="frame" x="0.0" y="222.5" width="450" height="222.5"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="gray"/>
-                                    <connections>
-                                        <action selector="lifeTotalDownActions" destination="-2" eventType="primaryActionTriggered" id="QlT-Kz-TiQ"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-zN-uMB">
-                            <rect key="frame" x="164.5" y="163" width="121.5" height="119.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="100"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e9-9h-HEr">
+                            <rect key="frame" x="0.0" y="0.0" width="450" height="222.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray"/>
+                            <connections>
+                                <action selector="lifeTotalUpActions" destination="-2" eventType="primaryActionTriggered" id="fhW-KX-S0n"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEh-Tv-5w0">
+                            <rect key="frame" x="0.0" y="222.5" width="450" height="222.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray"/>
+                            <connections>
+                                <action selector="lifeTotalDownActions" destination="-2" eventType="primaryActionTriggered" id="QlT-Kz-TiQ"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OPG-zN-uMB">
+                    <rect key="frame" x="164.5" y="163" width="121.5" height="119.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-TG-EI6">
+                    <rect key="frame" x="210" y="284" width="30" height="27.5"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="Fn1-0R-iiD" firstAttribute="leading" secondItem="pxO-8j-5hY" secondAttribute="leading" id="DwZ-Oe-ocJ"/>
-                        <constraint firstAttribute="trailing" secondItem="Fn1-0R-iiD" secondAttribute="trailing" id="als-fm-lLp"/>
-                        <constraint firstAttribute="bottom" secondItem="Fn1-0R-iiD" secondAttribute="bottom" id="j7d-iD-WfB"/>
-                        <constraint firstItem="Fn1-0R-iiD" firstAttribute="centerY" secondItem="pxO-8j-5hY" secondAttribute="centerY" id="kzL-Qf-yDx"/>
-                        <constraint firstItem="Fn1-0R-iiD" firstAttribute="centerX" secondItem="pxO-8j-5hY" secondAttribute="centerX" id="tpb-70-0Kt"/>
-                        <constraint firstItem="OPG-zN-uMB" firstAttribute="centerX" secondItem="pxO-8j-5hY" secondAttribute="centerX" id="w8T-9b-1Le"/>
-                        <constraint firstItem="OPG-zN-uMB" firstAttribute="centerY" secondItem="pxO-8j-5hY" secondAttribute="centerY" id="yOX-dj-U0H"/>
-                        <constraint firstItem="Fn1-0R-iiD" firstAttribute="top" secondItem="pxO-8j-5hY" secondAttribute="top" id="zgX-Nl-zGf"/>
+                        <constraint firstAttribute="height" constant="30" id="I0i-ca-02x"/>
+                        <constraint firstAttribute="width" constant="30" id="QlE-8A-LPG"/>
                     </constraints>
-                </view>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="pxO-8j-5hY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1Ev-Dq-tEC"/>
-                <constraint firstItem="pxO-8j-5hY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3qs-bh-fEg"/>
-                <constraint firstItem="Pq4-0b-45M" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AFH-W4-EC9"/>
-                <constraint firstItem="Pq4-0b-45M" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KC6-f2-Ib6"/>
-                <constraint firstAttribute="bottom" secondItem="pxO-8j-5hY" secondAttribute="bottom" id="PLZ-z0-B63"/>
-                <constraint firstItem="pxO-8j-5hY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="X74-Wb-L21"/>
-                <constraint firstItem="Pq4-0b-45M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZwP-Eb-HO6"/>
-                <constraint firstItem="pxO-8j-5hY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bih-bR-x3n"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Pq4-0b-45M" secondAttribute="trailing" id="dLa-UE-7QP"/>
-                <constraint firstAttribute="bottom" secondItem="Pq4-0b-45M" secondAttribute="bottom" id="g0j-lj-RGa"/>
-                <constraint firstItem="Pq4-0b-45M" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rTt-RL-l6s"/>
-                <constraint firstItem="pxO-8j-5hY" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="vwI-NY-umq"/>
+                <constraint firstItem="Fn1-0R-iiD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="4jb-Ie-CHO"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OPG-zN-uMB" secondAttribute="trailing" id="9ZC-dd-QzX"/>
+                <constraint firstItem="Fn1-0R-iiD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Cyp-7x-2uf"/>
+                <constraint firstItem="Fn1-0R-iiD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DfE-Cc-Rve"/>
+                <constraint firstItem="Fn1-0R-iiD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ow3-cZ-eiG"/>
+                <constraint firstItem="6aU-TG-EI6" firstAttribute="top" secondItem="OPG-zN-uMB" secondAttribute="bottom" id="UEM-aK-Row"/>
+                <constraint firstItem="OPG-zN-uMB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="VcN-8j-JPi"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="6aU-TG-EI6" secondAttribute="bottom" id="aEl-0m-zbm"/>
+                <constraint firstAttribute="trailing" secondItem="Fn1-0R-iiD" secondAttribute="trailing" id="bxl-9I-4gb"/>
+                <constraint firstItem="6aU-TG-EI6" firstAttribute="centerX" secondItem="OPG-zN-uMB" secondAttribute="centerX" id="nsS-pk-ztg"/>
+                <constraint firstAttribute="bottom" secondItem="Fn1-0R-iiD" secondAttribute="bottom" id="orh-1C-A4H"/>
+                <constraint firstItem="OPG-zN-uMB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" id="qkI-pV-DNw"/>
+                <constraint firstItem="OPG-zN-uMB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xA8-PB-Hce"/>
+                <constraint firstItem="OPG-zN-uMB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" id="zhL-UB-7K7"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -96,6 +86,7 @@
         </view>
     </objects>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
