@@ -25,26 +25,10 @@ enum ViewControllerProvider {
 
     static func startGameViewController(lifeTotal: Int, numPlayers: PlayerCount) -> PlayersViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var viewController: PlayersViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier: "PlayersViewController") as! PlayersViewController
 
-        switch numPlayers {
-        case .two:
-            viewController = storyboard.instantiateViewController(withIdentifier: "TwoPlayersViewController") as! TwoPlayersViewController
-            break
-        case .three:
-            viewController = storyboard.instantiateViewController(withIdentifier: "ThreePlayersViewController") as! ThreePlayersViewController
-            break
-        case .four:
-            viewController = storyboard.instantiateViewController(withIdentifier: "FourPlayersViewController") as! FourPlayersViewController
-            break
-        case .five:
-            viewController = storyboard.instantiateViewController(withIdentifier: "FivePlayersViewController") as! FivePlayersViewController
-            break
-        case .six:
-            viewController = storyboard.instantiateViewController(withIdentifier: "SixPlayersViewController") as! SixPlayersViewController
-            break
-        }
         viewController.startingLifeTotal = lifeTotal
+        viewController.numberOfPlayers = numPlayers
         
         return viewController
     }

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThreePlayersView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="eCS-tA-EAF"/>
+                <outlet property="player1Parrent" destination="Ssc-Zs-MdB" id="FU0-Ko-2MR"/>
+                <outlet property="player2Parrent" destination="5Nh-OS-ova" id="8uY-I8-ylN"/>
+                <outlet property="playerView3" destination="gcB-lC-Cbu" id="7L4-f2-XkG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R6f-sl-Ohc">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0vg-Yk-YrP">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="495"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ssc-Zs-MdB">
+                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="495"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Nh-OS-ova">
+                                    <rect key="frame" x="209.5" y="0.0" width="204.5" height="495"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcB-lC-Cbu" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="503" width="414" height="393"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="gcB-lC-Cbu" secondAttribute="height" multiplier="138:131" id="v7m-33-xlH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEZ-2r-DF8">
+                    <rect key="frame" x="185" y="478" width="44" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="bT6-ka-3oP"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="bcj-75-Hy9"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled"/>
+                    <connections>
+                        <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="3Nx-sx-EM1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="R6f-sl-Ohc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8Ko-oZ-fV5"/>
+                <constraint firstItem="R6f-sl-Ohc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PiF-Xr-Xgu"/>
+                <constraint firstItem="R6f-sl-Ohc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sga-S1-ahn"/>
+                <constraint firstItem="bEZ-2r-DF8" firstAttribute="top" secondItem="gcB-lC-Cbu" secondAttribute="top" constant="-25" id="VkN-i3-lKg"/>
+                <constraint firstAttribute="bottom" secondItem="R6f-sl-Ohc" secondAttribute="bottom" id="YGg-70-661"/>
+                <constraint firstItem="R6f-sl-Ohc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="kXO-ua-tGa"/>
+                <constraint firstItem="R6f-sl-Ohc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lJO-XH-1w8"/>
+                <constraint firstItem="bEZ-2r-DF8" firstAttribute="centerX" secondItem="gcB-lC-Cbu" secondAttribute="centerX" id="wIe-hf-OQ3"/>
+            </constraints>
+            <point key="canvasLocation" x="141" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

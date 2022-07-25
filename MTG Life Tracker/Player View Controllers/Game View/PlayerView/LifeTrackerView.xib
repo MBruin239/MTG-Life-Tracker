@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
             <connections>
                 <outlet property="bottomButton" destination="PEh-Tv-5w0" id="FWM-zf-Zl7"/>
-                <outlet property="contentView" destination="iN0-l3-epB" id="Xbw-5e-qFp"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="3o4-wg-b5b"/>
                 <outlet property="lifeTotalLabel" destination="OPG-zN-uMB" id="FDc-QB-7jV"/>
                 <outlet property="pannableView" destination="pxO-8j-5hY" id="PbI-Jd-LzA"/>
                 <outlet property="topButton" destination="0e9-9h-HEr" id="kT8-fg-b6J"/>

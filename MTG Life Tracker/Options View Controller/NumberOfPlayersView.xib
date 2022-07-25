@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NumberOfPlayersView" customModule="MTG_Life_Tracker" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="iN0-l3-epB" id="Ll1-ee-cHG"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="gMN-nN-153"/>
                 <outlet property="fiveButton" destination="1EJ-qB-C3n" id="9Cs-KK-lS2"/>
                 <outlet property="fourButton" destination="Hpb-AJ-48Q" id="6VR-U4-fqj"/>
                 <outlet property="sixButton" destination="O75-nw-xSB" id="emO-4S-1XK"/>

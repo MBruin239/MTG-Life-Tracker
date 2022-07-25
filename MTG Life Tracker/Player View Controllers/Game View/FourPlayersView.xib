@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FourPlayersView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ndb-7F-p55"/>
+                <outlet property="player1Parrent" destination="9pT-rP-o7c" id="ofY-kf-VDd"/>
+                <outlet property="player2Parrent" destination="XDO-Se-DSU" id="pbL-7H-ECs"/>
+                <outlet property="player3Parrent" destination="A6U-6N-7ue" id="OqB-6B-Onq"/>
+                <outlet property="player4Parrent" destination="I74-Fc-EXe" id="Dwx-th-Agi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Wl-Sw-NgB">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CFV-CH-6Al">
+                            <rect key="frame" x="0.0" y="0.0" width="204.5" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-rP-o7c">
+                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="445.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-Se-DSU">
+                                    <rect key="frame" x="0.0" y="450.5" width="204.5" height="445.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tee-GS-Qrs">
+                            <rect key="frame" x="209.5" y="0.0" width="204.5" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6U-6N-7ue">
+                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="445.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I74-Fc-EXe">
+                                    <rect key="frame" x="0.0" y="450.5" width="204.5" height="445.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BM-op-zAV">
+                    <rect key="frame" x="185" y="423" width="44" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="AzN-AF-qDp"/>
+                        <constraint firstAttribute="height" constant="50" id="gZX-Rf-aaJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled"/>
+                    <connections>
+                        <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="215-aD-FqZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="0Wl-Sw-NgB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0vv-1R-D1d"/>
+                <constraint firstItem="0Wl-Sw-NgB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="72K-27-cfv"/>
+                <constraint firstItem="0Wl-Sw-NgB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="RRh-jB-kdR"/>
+                <constraint firstItem="0Wl-Sw-NgB" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="TI3-BF-SDc"/>
+                <constraint firstItem="0Wl-Sw-NgB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="amI-hu-Y79"/>
+                <constraint firstItem="8BM-op-zAV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ash-LZ-a2z"/>
+                <constraint firstItem="8BM-op-zAV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gTJ-ko-CrZ"/>
+                <constraint firstAttribute="bottom" secondItem="0Wl-Sw-NgB" secondAttribute="bottom" id="jwd-xc-lqC"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="85"/>
+        </view>
+    </objects>
+</document>

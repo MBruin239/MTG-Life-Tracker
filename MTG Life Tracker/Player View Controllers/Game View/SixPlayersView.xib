@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SixPlayersView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="1op-or-bxD"/>
+                <outlet property="player1Parrent" destination="99K-zZ-HA3" id="p4t-OC-CpO"/>
+                <outlet property="player2Parrent" destination="ep0-d9-pUe" id="82s-Oe-cjO"/>
+                <outlet property="player3Parrent" destination="0Vd-mj-jTa" id="Sya-Bp-B6E"/>
+                <outlet property="player4Parrent" destination="MvP-bi-XBa" id="Dq3-RC-Qr6"/>
+                <outlet property="player5Parrent" destination="Fhe-Py-BiQ" id="P2O-Bs-nH7"/>
+                <outlet property="player6Parrent" destination="TYN-E0-hlC" id="TeL-aF-DDa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="buZ-yK-Dkd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OlK-PM-lAu">
+                            <rect key="frame" x="0.0" y="0.0" width="204.5" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="99K-zZ-HA3">
+                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="295.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-d9-pUe">
+                                    <rect key="frame" x="0.0" y="300.5" width="204.5" height="295"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-mj-jTa">
+                                    <rect key="frame" x="0.0" y="600.5" width="204.5" height="295.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Woh-5N-5wU">
+                            <rect key="frame" x="209.5" y="0.0" width="204.5" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvP-bi-XBa">
+                                    <rect key="frame" x="0.0" y="0.0" width="204.5" height="295.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fhe-Py-BiQ">
+                                    <rect key="frame" x="0.0" y="300.5" width="204.5" height="295"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYN-E0-hlC">
+                                    <rect key="frame" x="0.0" y="600.5" width="204.5" height="295.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J0-4C-x8I">
+                    <rect key="frame" x="185" y="423" width="44" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="UjT-bY-VJS"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ni7-zH-tgR"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled"/>
+                    <connections>
+                        <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="nr6-Jd-QP2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="buZ-yK-Dkd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2p1-ZW-hSi"/>
+                <constraint firstItem="buZ-yK-Dkd" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="377-6p-a2z"/>
+                <constraint firstItem="buZ-yK-Dkd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9a5-py-pNp"/>
+                <constraint firstItem="buZ-yK-Dkd" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BbU-Z0-3il"/>
+                <constraint firstItem="8J0-4C-x8I" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Ek9-OO-rDx"/>
+                <constraint firstItem="8J0-4C-x8I" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MaJ-8e-IGy"/>
+                <constraint firstAttribute="bottom" secondItem="buZ-yK-Dkd" secondAttribute="bottom" id="QP5-KT-qYN"/>
+                <constraint firstItem="buZ-yK-Dkd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZO5-CI-gHa"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+</document>

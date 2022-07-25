@@ -11,29 +11,17 @@ protocol StartingLifeTotalViewDelegate {
     func setStartingLifeTotal(lifeTotal: Int)
 }
 
-class StartingLifeTotalView: UIView {
+class StartingLifeTotalView: CustomView {
     let kCONTENT_XIB_NAME = "StartingLifeTotalView"
     
     var delegate: StartingLifeTotalViewDelegate?
-    
-    @IBOutlet var contentView: UIView!
-    
+        
     @IBOutlet var twentyButton: UIButton!
     @IBOutlet var thirtyButton: UIButton!
     @IBOutlet var fourtyButton: UIButton!
-
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    func commonInit() {
+    override func commonInit() {
+        super.commonInit()
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
     }
