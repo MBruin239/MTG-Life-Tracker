@@ -91,11 +91,15 @@ class PlayerView: CustomView {
                 }
             }
         }
+        if countersStack.subviews.count == 0 {
+            countersStack.isHidden = true
+        }
     }
     
     func addCounterViewToStack(view: LifeTrackerView){
         mainStack.addArrangedSubview(countersStack)
         countersStack.addArrangedSubview(view)
+        countersStack.isHidden = false
     }
     
     @objc private func didPan(_ sender: UIPanGestureRecognizer) {
@@ -151,6 +155,9 @@ extension PlayerView: OptionsViewDelegate {
                     addCounterViewToStack(view: counterView)
                 }
             }
+        }
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
+            pannableView.center = contentView.center
         }
     }
     

@@ -26,14 +26,15 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft0-Z7-vMx" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                            <rect key="frame" x="154" y="787" width="106" height="31"/>
+                            <rect key="frame" x="132" y="768" width="150" height="50"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="106" id="L0W-E1-7vG"/>
-                                <constraint firstAttribute="height" constant="31" id="zye-0z-lo1"/>
+                                <constraint firstAttribute="width" constant="150" id="L0W-E1-7vG"/>
+                                <constraint firstAttribute="height" constant="50" id="zye-0z-lo1"/>
                             </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Done"/>
                             <connections>
                                 <action selector="doneButtonPress" destination="-1" eventType="primaryActionTriggered" id="Jnq-Ap-Fa4"/>
                             </connections>
@@ -61,7 +62,7 @@
                                         <constraint firstAttribute="height" constant="75" id="htc-B0-dId"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                     <state key="normal" image="book.fill" catalog="system"/>
                                     <connections>
                                         <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="WIp-tB-7WL"/>
@@ -74,7 +75,7 @@
                                         <constraint firstAttribute="height" constant="75" id="wYh-ct-Taf"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                     <state key="normal" image="theatermasks.fill" catalog="system"/>
                                     <connections>
                                         <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="vOx-bK-hQI"/>
@@ -87,7 +88,7 @@
                                         <constraint firstAttribute="width" constant="75" id="ORy-lr-hD6"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                     <state key="normal" image="sun.max.fill" catalog="system"/>
                                     <connections>
                                         <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="LbE-aK-IgR"/>

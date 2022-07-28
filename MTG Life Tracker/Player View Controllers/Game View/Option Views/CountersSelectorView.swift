@@ -31,7 +31,7 @@ class CountersSelectorView: CustomView {
     @IBOutlet var theatureButton: CustomButton!
     @IBOutlet var sunButton: CustomButton!
     
-    @IBOutlet var doneButton: UIButton!
+    @IBOutlet var doneButton: CustomButton!
 
     override func commonInit() {
         super.commonInit()
@@ -45,14 +45,18 @@ class CountersSelectorView: CustomView {
         theatureButton.setupCounterButton(counterType: .theature)
 
         sunButton.setupCounterButton(counterType: .sun)
-
+        
+        doneButton.cornerRadius = 10.0
+        
+       // doneButton.titleLabel?.text = "Cancel"
     }
     
     @IBAction func toggleButton(_ sender: CustomButton) {
         if sender.isSelected == false {
-            sender.isSelected = true;
+            sender.isSelected = true
             sender.backgroundColor = .lightGray
             counterTypeArray.append((sender.counterType, sender.imageView?.image))
+          //  doneButton.titleLabel?.text = "Done"
         } else {
             sender.isSelected = false;
             sender.backgroundColor = .clear
@@ -61,6 +65,9 @@ class CountersSelectorView: CustomView {
                     counterTypeArray.remove(at: i)
                 }
             }
+        }
+        if counterTypeArray.count == 0 {
+          //  doneButton.titleLabel?.text = "Cancel"
         }
     }
     
