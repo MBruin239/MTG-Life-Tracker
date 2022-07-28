@@ -9,6 +9,7 @@ import UIKit
 
 protocol PlayersViewDelegate {
     func menuButtonPress()
+    func openCounterSelectorView(counterSelectorView: CountersSelectorView)
 }
 
 class PlayersView: CustomView {
@@ -22,5 +23,11 @@ class PlayersView: CustomView {
     
     @IBAction func menuButtonPress() {
         delegate?.menuButtonPress()
+    }
+}
+
+extension PlayersView: PlayerViewDelegate {
+    func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
+        delegate?.openCounterSelectorView(counterSelectorView: counterSelectorView)
     }
 }

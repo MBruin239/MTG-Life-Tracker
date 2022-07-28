@@ -7,7 +7,16 @@
 
 import UIKit
 
+enum PlayerCount {
+    case two
+    case three
+    case four
+    case five
+    case six
+}
+
 protocol NumberOfPlayersViewDelegate {
+    func numberOfPlayersViewBackButtonPress()
     func setNumberOfPlayers(playerCount: PlayerCount)
 }
 
@@ -26,6 +35,10 @@ class NumberOfPlayersView: CustomView {
         super.commonInit()
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
+    }
+    
+    @IBAction func backButtonPress() {
+        delegate?.numberOfPlayersViewBackButtonPress()
     }
     
     @IBAction func twoButtonPress() {

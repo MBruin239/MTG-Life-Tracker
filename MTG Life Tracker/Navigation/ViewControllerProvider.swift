@@ -8,14 +8,6 @@
 import Foundation
 import UIKit
 
-enum PlayerCount {
-    case two
-    case three
-    case four
-    case five
-    case six
-}
-
 enum ViewControllerProvider {
     static var optionsViewController: OptionsViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

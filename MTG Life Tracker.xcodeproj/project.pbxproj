@@ -29,6 +29,9 @@
 		716553AE288EDC5900FB64FB /* SixPlayersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716553AD288EDC5900FB64FB /* SixPlayersView.xib */; };
 		716553B1288F115300FB64FB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716553B0288F115300FB64FB /* PlayerView.swift */; };
 		716553B3288F123B00FB64FB /* PlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716553B2288F123B00FB64FB /* PlayerView.xib */; };
+		716553B6288F6FF800FB64FB /* PlayerSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716553B5288F6FF800FB64FB /* PlayerSelectorView.swift */; };
+		716553B8288F701500FB64FB /* PlayerSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716553B7288F701500FB64FB /* PlayerSelectorView.xib */; };
+		716553BA288F785600FB64FB /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716553B9288F785600FB64FB /* CircleView.swift */; };
 		7175EAF4288C3501009AA437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF3288C3501009AA437 /* AppDelegate.swift */; };
 		7175EAF6288C3501009AA437 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EAF5288C3501009AA437 /* SceneDelegate.swift */; };
 		7175EAFB288C3501009AA437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7175EAF9288C3501009AA437 /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 		7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7175EB27288C54AA009AA437 /* OptionsView.xib */; };
 		7175EB2A288C54B9009AA437 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB29288C54B9009AA437 /* OptionsView.swift */; };
 		7175EB2C288C70EB009AA437 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB2B288C70EB009AA437 /* PlayersViewController.swift */; };
+		71976EAD2891E68300FAEA93 /* CountersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */; };
+		71976EAF2891E68F00FAEA93 /* CountersSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */; };
+		71976EB128922E9700FAEA93 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB028922E9700FAEA93 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,9 @@
 		716553AD288EDC5900FB64FB /* SixPlayersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SixPlayersView.xib; sourceTree = "<group>"; };
 		716553B0288F115300FB64FB /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		716553B2288F123B00FB64FB /* PlayerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerView.xib; sourceTree = "<group>"; };
+		716553B5288F6FF800FB64FB /* PlayerSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerSelectorView.swift; sourceTree = "<group>"; };
+		716553B7288F701500FB64FB /* PlayerSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerSelectorView.xib; sourceTree = "<group>"; };
+		716553B9288F785600FB64FB /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		7175EAF0288C3501009AA437 /* MTG Life Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MTG Life Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7175EAF3288C3501009AA437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7175EAF5288C3501009AA437 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +110,9 @@
 		7175EB27288C54AA009AA437 /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
 		7175EB29288C54B9009AA437 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		7175EB2B288C70EB009AA437 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersSelectorView.swift; sourceTree = "<group>"; };
+		71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountersSelectorView.xib; sourceTree = "<group>"; };
+		71976EB028922E9700FAEA93 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,7 @@
 		71655396288EC10700FB64FB /* Game View */ = {
 			isa = PBXGroup;
 			children = (
+				716553B4288F6FA400FB64FB /* Option Views */,
 				71655379288DF79700FB64FB /* PlayerView */,
 				71655397288EC14400FB64FB /* PlayersView.swift */,
 				7165539B288ECE3F00FB64FB /* TwoPlayersView.swift */,
@@ -197,8 +210,21 @@
 			isa = PBXGroup;
 			children = (
 				71655399288EC18C00FB64FB /* CustomView.swift */,
+				716553B9288F785600FB64FB /* CircleView.swift */,
+				71976EB028922E9700FAEA93 /* CustomButton.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		716553B4288F6FA400FB64FB /* Option Views */ = {
+			isa = PBXGroup;
+			children = (
+				716553B5288F6FF800FB64FB /* PlayerSelectorView.swift */,
+				716553B7288F701500FB64FB /* PlayerSelectorView.xib */,
+				71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */,
+				71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */,
+			);
+			path = "Option Views";
 			sourceTree = "<group>";
 		};
 		7175EAE7288C3501009AA437 = {
@@ -361,9 +387,11 @@
 				7165539E288ECE9B00FB64FB /* TwoPlayersView.xib in Resources */,
 				7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */,
 				716553AE288EDC5900FB64FB /* SixPlayersView.xib in Resources */,
+				716553B8288F701500FB64FB /* PlayerSelectorView.xib in Resources */,
 				716553A0288ED70C00FB64FB /* ThreePlayersView.xib in Resources */,
 				716553A8288EDADC00FB64FB /* FivePlayersView.xib in Resources */,
 				716553A6288EDA2D00FB64FB /* FourPlayersView.xib in Resources */,
+				71976EAF2891E68F00FAEA93 /* CountersSelectorView.xib in Resources */,
 				7175EB00288C3504009AA437 /* LaunchScreen.storyboard in Resources */,
 				71655381288DFD0E00FB64FB /* StartingLifeTotalView.xib in Resources */,
 				7175EAFD288C3504009AA437 /* Assets.xcassets in Resources */,
@@ -398,6 +426,7 @@
 				7165538D288E002F00FB64FB /* MainCoordinator.swift in Sources */,
 				7165537D288DF80B00FB64FB /* OptionsViewController.swift in Sources */,
 				7165539A288EC18C00FB64FB /* CustomView.swift in Sources */,
+				716553B6288F6FF800FB64FB /* PlayerSelectorView.swift in Sources */,
 				7165538C288E002F00FB64FB /* ViewControllerProvider.swift in Sources */,
 				7175EAF4288C3501009AA437 /* AppDelegate.swift in Sources */,
 				7175EAF6288C3501009AA437 /* SceneDelegate.swift in Sources */,
@@ -405,9 +434,12 @@
 				7165538F288E002F00FB64FB /* Coordinator.swift in Sources */,
 				716553AA288EDAE800FB64FB /* FivePlayersView.swift in Sources */,
 				7175EB2A288C54B9009AA437 /* OptionsView.swift in Sources */,
+				716553BA288F785600FB64FB /* CircleView.swift in Sources */,
 				7175EB26288C376D009AA437 /* LifeTrackerView.swift in Sources */,
+				71976EB128922E9700FAEA93 /* CustomButton.swift in Sources */,
 				71655398288EC14400FB64FB /* PlayersView.swift in Sources */,
 				7175EB2C288C70EB009AA437 /* PlayersViewController.swift in Sources */,
+				71976EAD2891E68300FAEA93 /* CountersSelectorView.swift in Sources */,
 				716553A2288ED72400FB64FB /* ThreePlayersView.swift in Sources */,
 				71655383288DFE9600FB64FB /* StartingLifeTotalView.swift in Sources */,
 				71655385288DFF0700FB64FB /* NumberOfPlayersView.swift in Sources */,

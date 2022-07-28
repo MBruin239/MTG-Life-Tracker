@@ -43,6 +43,30 @@ extension UIView
         self.transform = self.transform.rotated(by: rotation);
         container.addSubview(self);
     }
+    
+    func transitionInFromRight(container: UIView!, oldView: UIView){
+        self.frame = CGRect.init(x: 2*container.frame.width, y: 0, width: container.frame.width, height: container.frame.height)
+        container.addSubview(self)
+        
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: .curveEaseOut, animations: { [self] in
+            oldView.center = CGPoint.init(x: -1*oldView.frame.width, y: oldView.center.y)
+            self.center = container.center
+        }, completion: {_ in
+            oldView.removeFromSuperview()
+        })
+    }
+    
+    func transitionInFromLeft(container: UIView!, oldView: UIView){
+        self.frame = CGRect.init(x: -1*container.frame.width, y: 0, width: container.frame.width, height: container.frame.height)
+        container.addSubview(self)
+        
+        UIView.animate(withDuration: 0.4, delay: 0.1, options: .curveEaseOut, animations: { [self] in
+            oldView.center = CGPoint.init(x: 2*oldView.frame.width, y: oldView.center.y)
+            self.center = container.center
+        }, completion: {_ in
+            oldView.removeFromSuperview()
+        })
+    }
 }
 
 extension CGRect {
@@ -51,5 +75,22 @@ extension CGRect {
         let yOffset = (height - width) / 2.0
         
         return CGRect(x: xOffset, y: yOffset, width: self.size.height, height: self.size.width)
+    }
+}
+
+extension CGFloat {
+    static func random() -> CGFloat {
+        return CGFloat(arc4random()) / CGFloat(UInt32.max)
+    }
+}
+
+extension UIColor {
+    static func random() -> UIColor {
+        return UIColor(
+           red:   .random(),
+           green: .random(),
+           blue:  .random(),
+           alpha: 1.0
+        )
     }
 }

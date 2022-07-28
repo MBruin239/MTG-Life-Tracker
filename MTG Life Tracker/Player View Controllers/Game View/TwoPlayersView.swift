@@ -9,8 +9,8 @@ import Foundation
 
 class TwoPlayersView: PlayersView {
     let kCONTENT_XIB_NAME = "TwoPlayersView"
-    @IBOutlet var playerView1: PlayerView!
-    @IBOutlet var playerView2: PlayerView!
+    @IBOutlet var playerView1: PlayerView! { didSet { playerView1.delegate = self } }
+    @IBOutlet var playerView2: PlayerView! { didSet { playerView2.delegate = self } }
 
     override func commonInit() {
         super.commonInit()
@@ -22,5 +22,8 @@ class TwoPlayersView: PlayersView {
         playerView1.transform = playerView1.transform.rotated(by: Double.pi);
         playerView1.playerLifeView.lifeTotal = startingLifeTotal
         playerView2.playerLifeView.lifeTotal = startingLifeTotal
+        
+        playerView1.delegate = self
+        playerView2.delegate = self
     }
 }

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountersSelectorView">
+            <connections>
+                <outlet property="bookButton" destination="jLV-N6-wQD" id="yQh-6M-1AS"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ibP-lw-BhC"/>
+                <outlet property="doneButton" destination="ft0-Z7-vMx" id="bAh-G4-y0M"/>
+                <outlet property="starButton" destination="yRs-0e-fyh" id="2Sq-ca-4XX"/>
+                <outlet property="sunButton" destination="FK4-Hd-dwD" id="X18-m1-HE3"/>
+                <outlet property="theatureButton" destination="LhY-8E-hQl" id="6hr-rG-hN7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwX-hO-4HT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft0-Z7-vMx" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                            <rect key="frame" x="154" y="787" width="106" height="31"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="106" id="L0W-E1-7vG"/>
+                                <constraint firstAttribute="height" constant="31" id="zye-0z-lo1"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
+                            <connections>
+                                <action selector="doneButtonPress" destination="-1" eventType="primaryActionTriggered" id="Jnq-Ap-Fa4"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ALh-bd-DUv">
+                            <rect key="frame" x="49" y="85" width="75" height="600"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRs-0e-fyh" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="KcR-5c-p14"/>
+                                        <constraint firstAttribute="width" constant="75" id="h9z-FI-dtR"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" image="star.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="AZT-oZ-ZLq"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLV-N6-wQD" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="175" width="75" height="75"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="75" id="FQc-UM-r1j"/>
+                                        <constraint firstAttribute="height" constant="75" id="htc-B0-dId"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="book.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="WIp-tB-7WL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhY-8E-hQl" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="350" width="75" height="75"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="75" id="XXR-df-clC"/>
+                                        <constraint firstAttribute="height" constant="75" id="wYh-ct-Taf"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="theatermasks.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="vOx-bK-hQI"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK4-Hd-dwD" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="525" width="75" height="75"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="75" id="8YS-8j-Tou"/>
+                                        <constraint firstAttribute="width" constant="75" id="ORy-lr-hD6"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="sun.max.fill" catalog="system"/>
+                                    <connections>
+                                        <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="LbE-aK-IgR"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="600" id="cDM-6j-yBB"/>
+                                <constraint firstAttribute="width" constant="75" id="imk-Po-iCC"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.90498476612324619" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ft0-Z7-vMx" firstAttribute="centerX" secondItem="RwX-hO-4HT" secondAttribute="centerX" id="4dm-by-2Gm"/>
+                        <constraint firstItem="ALh-bd-DUv" firstAttribute="leading" secondItem="RwX-hO-4HT" secondAttribute="leading" constant="49" id="61C-8p-3kn"/>
+                        <constraint firstItem="ALh-bd-DUv" firstAttribute="top" secondItem="RwX-hO-4HT" secondAttribute="top" constant="85" id="KQn-I6-fXR"/>
+                        <constraint firstAttribute="bottom" secondItem="ft0-Z7-vMx" secondAttribute="bottom" constant="78" id="tfc-fj-fEg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="RwX-hO-4HT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Rae-lK-2TH"/>
+                <constraint firstItem="RwX-hO-4HT" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Tv0-0R-M4e"/>
+                <constraint firstItem="RwX-hO-4HT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eDQ-vZ-CNw"/>
+                <constraint firstAttribute="bottom" secondItem="RwX-hO-4HT" secondAttribute="bottom" id="qMn-6b-WA4"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
+        <image name="theatermasks.fill" catalog="system" width="128" height="85"/>
+    </resources>
+</document>

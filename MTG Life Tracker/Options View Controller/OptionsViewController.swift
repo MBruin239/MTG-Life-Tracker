@@ -20,23 +20,22 @@ class OptionsViewController: UIViewController {
         startingLifeTotalView.frame = self.view.frame
         startingLifeTotalView.delegate = self
         self.view.addSubview(startingLifeTotalView)
-        
     }
 }
 
 extension OptionsViewController: StartingLifeTotalViewDelegate {
     func setStartingLifeTotal(lifeTotal: Int) {
         startingLifeTotal = lifeTotal
-        startingLifeTotalView.removeFromSuperview()
-        
-        numberOfPlayersView.frame = self.view.frame
+        numberOfPlayersView.transitionInFromRight(container: self.view, oldView: startingLifeTotalView)
         numberOfPlayersView.delegate = self
-        self.view.addSubview(numberOfPlayersView)
-        
     }
 }
 
 extension OptionsViewController: NumberOfPlayersViewDelegate {
+    func numberOfPlayersViewBackButtonPress() {
+        startingLifeTotalView.transitionInFromLeft(container: self.view, oldView: numberOfPlayersView)
+    }
+
     func setNumberOfPlayers(playerCount: PlayerCount) {
         numberOfPlayers = playerCount
         coordinator?.startGameViewController(lifeTotal: startingLifeTotal!, numPlayers: numberOfPlayers!)

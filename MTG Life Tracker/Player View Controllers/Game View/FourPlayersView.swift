@@ -40,5 +40,10 @@ class FourPlayersView: PlayersView {
         playerView2.rotateViewInView(player2Parrent, rotation: Double.pi*0.5)
         playerView3.rotateViewInView(player3Parrent, rotation: Double.pi*1.5)
         playerView4.rotateViewInView(player4Parrent, rotation: Double.pi*1.5)
+        
+        playerView1.delegate = self
+        playerView2.delegate = self
+        playerView3.delegate = self
+        playerView4.delegate = self
     }
 }

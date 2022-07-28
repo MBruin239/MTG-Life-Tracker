@@ -112,10 +112,24 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkv-ev-XFy">
+                    <rect key="frame" x="21" y="84" width="90" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Gkb-iU-vxW"/>
+                        <constraint firstAttribute="width" constant="90" id="mP5-Oi-ZqV"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back" imagePadding="5"/>
+                    <connections>
+                        <action selector="backButtonPress" destination="-1" eventType="primaryActionTriggered" id="Sz6-dw-Vzg"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="Bkv-ev-XFy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="21" id="30D-ic-e1j"/>
+                <constraint firstItem="Bkv-ev-XFy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="PZW-0B-FD7"/>
                 <constraint firstItem="1O2-Ms-VO7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dSp-Vd-Ocf"/>
                 <constraint firstItem="tlz-EU-Ptk" firstAttribute="top" secondItem="1O2-Ms-VO7" secondAttribute="bottom" constant="44" id="hRu-wi-7AC"/>
                 <constraint firstItem="tlz-EU-Ptk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pVq-Mg-aWp"/>
@@ -125,6 +139,7 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

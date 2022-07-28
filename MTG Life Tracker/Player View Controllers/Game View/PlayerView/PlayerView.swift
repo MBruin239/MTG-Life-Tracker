@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol PlayerViewDelegate {
+    func openCounterSelectorView(counterSelectorView: CountersSelectorView)
+}
+
 class PlayerView: CustomView {
     let kCONTENT_XIB_NAME = "PlayerView"
+    
+    var delegate: PlayerViewDelegate?
 
     @IBOutlet var playerLifeView: LifeTrackerView!
 
@@ -17,7 +23,7 @@ class PlayerView: CustomView {
     
     @IBOutlet var pannableView: UIView!
     @IBOutlet var behindColorView: UIView!
-    @IBOutlet var optionsView: OptionsView!
+    @IBOutlet var optionsView: OptionsView! { didSet { optionsView.delegate = self } }
     
     private var initialCenter: CGPoint = .zero
             
@@ -44,6 +50,47 @@ class PlayerView: CustomView {
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
         optionsView.addGestureRecognizer(tapGestureRecognizer)
+        
+        playerLifeView.contentView.backgroundColor = UIColor.random()
+    }
+    
+    func checkIfCounterViewExists(counterType: CounterType) -> Bool {
+        for view in countersStack.subviews {
+            if let counterView = view as? LifeTrackerView {
+                if counterView.counterType == counterType {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    
+    func makeCounterView(counterType: CounterType, image: UIImage) -> LifeTrackerView {
+        let counterView = LifeTrackerView()
+        counterView.lifeTotal = 0
+        counterView.counterType = counterType
+        counterView.bottomImage.image = image
+        
+        return counterView
+    }
+    
+    func checkIfCounterTypeIsInArray(counterType: CounterType, counterTypeArray: [(CounterType, UIImage?)]) -> Bool {
+        for object in counterTypeArray {
+            if object.0 == counterType {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func checkIfCounterViewsNeedRemoved(counterTypeArray: [(CounterType, UIImage?)]) {
+        for view in countersStack.subviews {
+            if let counterView = view as? LifeTrackerView {
+                if !checkIfCounterTypeIsInArray(counterType: counterView.counterType, counterTypeArray: counterTypeArray) {
+                    counterView.removeFromSuperview()
+                }
+            }
+        }
     }
     
     func addCounterViewToStack(view: LifeTrackerView){
@@ -89,4 +136,26 @@ class PlayerView: CustomView {
         }
     }
 
+}
+
+extension PlayerView: OptionsViewDelegate {
+    func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)]) {
+        checkIfCounterViewsNeedRemoved(counterTypeArray: counterTypeArray)
+        
+        for counterTuple in counterTypeArray {
+                let counterType = counterTuple.0
+            if !checkIfCounterViewExists(counterType: counterType){
+                if let image = counterTuple.1 {
+                    let counterView = makeCounterView(counterType: counterType, image: image)
+                    counterView.contentView.backgroundColor = playerLifeView.contentView.backgroundColor
+                    addCounterViewToStack(view: counterView)
+                }
+            }
+        }
+    }
+    
+    func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
+        delegate?.openCounterSelectorView(counterSelectorView: counterSelectorView)
+    }
+    
 }

@@ -45,10 +45,16 @@ class PlayersViewController: UIViewController {
                 playersView = SixPlayersView()
                 break
         }
+        playersView?.delegate = self
     }
 }
 
 extension PlayersViewController: PlayersViewDelegate {
+    func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
+        counterSelectorView.frame = self.view.frame
+        self.view.addSubview(counterSelectorView)
+    }
+    
     func menuButtonPress() {
         coordinator?.start()
     }

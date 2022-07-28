@@ -17,6 +17,7 @@ class LifeTrackerView: CustomView {
     @IBOutlet var bottomButton: UIButton!
     
     @IBOutlet var bottomImage: UIImageView!
+    var counterType: CounterType = .life
 
     var lifeTotal: Int = 40 {
         didSet {
