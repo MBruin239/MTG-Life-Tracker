@@ -31,7 +31,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray"/>
                             <connections>
-                                <action selector="lifeTotalUpActions" destination="-2" eventType="primaryActionTriggered" id="fhW-KX-S0n"/>
+                                <action selector="lifeTotalUpActions" destination="-1" eventType="primaryActionTriggered" id="bMv-uj-ycx"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEh-Tv-5w0">
@@ -40,7 +40,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray"/>
                             <connections>
-                                <action selector="lifeTotalDownActions" destination="-2" eventType="primaryActionTriggered" id="QlT-Kz-TiQ"/>
+                                <action selector="lifeTotalDownActions" destination="-1" eventType="primaryActionTriggered" id="4pN-rM-ZoK"/>
                             </connections>
                         </button>
                     </subviews>

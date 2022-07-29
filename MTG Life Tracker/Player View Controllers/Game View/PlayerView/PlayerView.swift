@@ -91,6 +91,7 @@ class PlayerView: CustomView {
                 }
             }
         }
+        // If there are no more counterviews in the stack, hide the stack view
         if countersStack.subviews.count == 0 {
             countersStack.isHidden = true
         }
@@ -100,6 +101,24 @@ class PlayerView: CustomView {
         mainStack.addArrangedSubview(countersStack)
         countersStack.addArrangedSubview(view)
         countersStack.isHidden = false
+    }
+    
+    func slidePanableViewToBottom() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
+            let leftOverAmount = pannableView.frame.height * 0.8
+            let rect = CGRect.init(x: contentView.frame.origin.x, y: leftOverAmount, width: contentView.frame.width, height: contentView.frame.height)
+            pannableView.frame = rect
+        }
+        // Disable the top button so you don't change the life trying to pan the view around
+        playerLifeView.topButton.isEnabled = false
+    }
+    
+    func slidePanableViewToTop() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
+            pannableView.center = contentView.center
+        }
+        // Make sure the top button is re-enabled when back to normal positioning
+        playerLifeView.topButton.isEnabled = true
     }
     
     @objc private func didPan(_ sender: UIPanGestureRecognizer) {
@@ -117,17 +136,11 @@ class PlayerView: CustomView {
                                           y: initialCenter.y + translation.y)
         case .ended, .cancelled:
             let translation = sender.translation(in: self.contentView)
-
+            
             if translation.y > initialCenter.y {
-                UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-                    let leftOverAmount = pannableView.frame.height * 0.8
-                    let rect = CGRect.init(x: contentView.frame.origin.x, y: leftOverAmount, width: contentView.frame.width, height: contentView.frame.height)
-                    pannableView.frame = rect
-                }
+                slidePanableViewToBottom()
             } else {
-                UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-                    pannableView.center = contentView.center
-                }
+                slidePanableViewToTop()
             }
         default:
             break
@@ -135,15 +148,14 @@ class PlayerView: CustomView {
     }
     
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-            pannableView.center = contentView.center
-        }
+        slidePanableViewToTop()
     }
 
 }
 
 extension PlayerView: OptionsViewDelegate {
     func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)]) {
+        // First we need to see if any counter views need removed
         checkIfCounterViewsNeedRemoved(counterTypeArray: counterTypeArray)
         
         for counterTuple in counterTypeArray {
@@ -156,9 +168,8 @@ extension PlayerView: OptionsViewDelegate {
                 }
             }
         }
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-            pannableView.center = contentView.center
-        }
+        // Move the view back up automatically
+        slidePanableViewToTop()
     }
     
     func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
