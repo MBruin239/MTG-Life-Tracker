@@ -50,6 +50,10 @@ class PlayersViewController: UIViewController {
 }
 
 extension PlayersViewController: PlayersViewDelegate {
+    func resetGameToStart() {
+        setup()
+    }
+    
     func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
         counterSelectorView.frame = self.view.frame
         self.view.addSubview(counterSelectorView)

@@ -48,6 +48,8 @@
 		71976EAD2891E68300FAEA93 /* CountersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */; };
 		71976EAF2891E68F00FAEA93 /* CountersSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */; };
 		71976EB128922E9700FAEA93 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB028922E9700FAEA93 /* CustomButton.swift */; };
+		71976EB32894B66600FAEA93 /* GameOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB22894B66600FAEA93 /* GameOptionsView.swift */; };
+		71976EB52894B67900FAEA93 /* GameOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71976EB42894B67900FAEA93 /* GameOptionsView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersSelectorView.swift; sourceTree = "<group>"; };
 		71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountersSelectorView.xib; sourceTree = "<group>"; };
 		71976EB028922E9700FAEA93 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		71976EB22894B66600FAEA93 /* GameOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsView.swift; sourceTree = "<group>"; };
+		71976EB42894B67900FAEA93 /* GameOptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOptionsView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +223,8 @@
 		716553B4288F6FA400FB64FB /* Option Views */ = {
 			isa = PBXGroup;
 			children = (
+				71976EB22894B66600FAEA93 /* GameOptionsView.swift */,
+				71976EB42894B67900FAEA93 /* GameOptionsView.xib */,
 				716553B5288F6FF800FB64FB /* PlayerSelectorView.swift */,
 				716553B7288F701500FB64FB /* PlayerSelectorView.xib */,
 				71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */,
@@ -388,6 +394,7 @@
 				7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */,
 				716553AE288EDC5900FB64FB /* SixPlayersView.xib in Resources */,
 				716553B8288F701500FB64FB /* PlayerSelectorView.xib in Resources */,
+				71976EB52894B67900FAEA93 /* GameOptionsView.xib in Resources */,
 				716553A0288ED70C00FB64FB /* ThreePlayersView.xib in Resources */,
 				716553A8288EDADC00FB64FB /* FivePlayersView.xib in Resources */,
 				716553A6288EDA2D00FB64FB /* FourPlayersView.xib in Resources */,
@@ -431,6 +438,7 @@
 				7175EAF4288C3501009AA437 /* AppDelegate.swift in Sources */,
 				7175EAF6288C3501009AA437 /* SceneDelegate.swift in Sources */,
 				716553A4288ED94F00FB64FB /* FourPlayersView.swift in Sources */,
+				71976EB32894B66600FAEA93 /* GameOptionsView.swift in Sources */,
 				7165538F288E002F00FB64FB /* Coordinator.swift in Sources */,
 				716553AA288EDAE800FB64FB /* FivePlayersView.swift in Sources */,
 				7175EB2A288C54B9009AA437 /* OptionsView.swift in Sources */,

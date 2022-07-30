@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameOptionsView">
+            <connections>
+                <outlet property="closeButton" destination="HIi-sj-y1p" id="nuK-yp-IvO"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="q2p-lL-GTT"/>
+                <outlet property="diceButton" destination="FjU-lI-1m2" id="t53-Pa-4eS"/>
+                <outlet property="resetButton" destination="FY2-El-921" id="3cv-Py-Bzy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-eE-4VH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-Nf-kqc" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                            <rect key="frame" x="132" y="658.5" width="150" height="50"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="J9w-2U-Qal"/>
+                                <constraint firstAttribute="height" constant="50" id="M1n-Uy-ClU"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Main Menu"/>
+                            <connections>
+                                <action selector="mainMenuButtonPress" destination="-1" eventType="primaryActionTriggered" id="WPM-V7-08s"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fAN-Jn-3Vi">
+                            <rect key="frame" x="97" y="398" width="220" height="100"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-El-921" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="AON-Yo-pdA"/>
+                                        <constraint firstAttribute="height" constant="100" id="hJL-Jz-gRr"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" title="Reset" image="arrow.counterclockwise" catalog="system"/>
+                                    <connections>
+                                        <action selector="resetButtonPress" destination="-1" eventType="primaryActionTriggered" id="Nr9-CK-Y04"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-lI-1m2" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="V66-If-ldg"/>
+                                        <constraint firstAttribute="height" constant="100" id="btQ-hl-Tx4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" title="Dice">
+                                        <imageReference key="image" image="dice.fill" catalog="system" symbolScale="large"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIi-sj-y1p" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                            <rect key="frame" x="354" y="52" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="9SQ-pt-aFi"/>
+                                <constraint firstAttribute="height" constant="50" id="nom-9n-OLc"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                            <state key="normal" image="xmark" catalog="system"/>
+                            <connections>
+                                <action selector="closeButtonPress" destination="-1" eventType="primaryActionTriggered" id="ooB-Yr-dmn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HIi-sj-y1p" secondAttribute="trailing" constant="10" id="2IT-9R-LgV"/>
+                        <constraint firstItem="fAN-Jn-3Vi" firstAttribute="centerX" secondItem="VnK-eE-4VH" secondAttribute="centerX" id="4YN-Y5-cOv"/>
+                        <constraint firstItem="rkc-Nf-kqc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fAN-Jn-3Vi" secondAttribute="bottom" constant="20" id="7uV-9E-VcW"/>
+                        <constraint firstItem="rkc-Nf-kqc" firstAttribute="top" secondItem="fAN-Jn-3Vi" secondAttribute="bottom" priority="750" constant="160.5" id="BlI-ml-Q8V"/>
+                        <constraint firstItem="HIi-sj-y1p" firstAttribute="top" secondItem="VnK-eE-4VH" secondAttribute="top" constant="52" id="GmS-aQ-oX4"/>
+                        <constraint firstItem="fAN-Jn-3Vi" firstAttribute="centerY" secondItem="VnK-eE-4VH" secondAttribute="centerY" id="Kyz-5i-IDk"/>
+                        <constraint firstItem="rkc-Nf-kqc" firstAttribute="centerX" secondItem="VnK-eE-4VH" secondAttribute="centerX" id="nQQ-TY-TIP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VnK-eE-4VH" secondAttribute="bottom" id="C2J-c2-Zzo"/>
+                <constraint firstItem="VnK-eE-4VH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b8w-b9-bmx"/>
+                <constraint firstItem="VnK-eE-4VH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vyM-nC-CRW"/>
+                <constraint firstItem="VnK-eE-4VH" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="xF4-lx-Dpb"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="121"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
+        <image name="dice.fill" catalog="system" width="128" height="113"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

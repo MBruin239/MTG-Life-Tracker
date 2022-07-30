@@ -19,6 +19,8 @@ class TwoPlayersView: PlayersView {
     }
     
     override func setup() {
+        super.setup()
+        
         playerView1.transform = playerView1.transform.rotated(by: Double.pi);
         playerView1.playerLifeView.lifeTotal = startingLifeTotal
         playerView2.playerLifeView.lifeTotal = startingLifeTotal

@@ -36,6 +36,8 @@ class SixPlayersView: PlayersView {
     }
     
     override func setup() {
+        super.setup()
+
         playerView1.playerLifeView.lifeTotal = startingLifeTotal
         playerView2.playerLifeView.lifeTotal = startingLifeTotal
         playerView3.playerLifeView.lifeTotal = startingLifeTotal
