@@ -18,6 +18,7 @@ class PlayerView: CustomView {
 
     @IBOutlet var playerLifeView: LifeTrackerView!
 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var mainStack: UIStackView!
     var countersStack: UIStackView = UIStackView()
     
@@ -52,6 +53,9 @@ class PlayerView: CustomView {
         optionsView.addGestureRecognizer(tapGestureRecognizer)
         
         playerLifeView.contentView.backgroundColor = UIColor.random()
+        
+        let widthConstraint = NSLayoutConstraint(item: playerLifeView!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 150)
+        playerLifeView.addConstraints([widthConstraint])
     }
     
     func checkIfCounterViewExists(counterType: CounterType) -> Bool {
@@ -71,6 +75,9 @@ class PlayerView: CustomView {
         counterView.counterType = counterType
         counterView.bottomImage.image = image
         
+        let widthConstraint = NSLayoutConstraint(item: counterView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100)
+        counterView.addConstraints([widthConstraint])
+
         return counterView
     }
     
@@ -91,9 +98,20 @@ class PlayerView: CustomView {
                 }
             }
         }
+        
+        changeMainStackDistribution()
+        
         // If there are no more counterviews in the stack, hide the stack view
         if countersStack.subviews.count == 0 {
             countersStack.isHidden = true
+        }
+    }
+    
+    func changeMainStackDistribution(){
+        if countersStack.subviews.count >= 3 {
+            mainStack.distribution = UIStackView.Distribution.fillProportionally
+        } else {
+            mainStack.distribution = UIStackView.Distribution.fillEqually
         }
     }
     
@@ -101,6 +119,8 @@ class PlayerView: CustomView {
         mainStack.addArrangedSubview(countersStack)
         countersStack.addArrangedSubview(view)
         countersStack.isHidden = false
+        
+        changeMainStackDistribution()
     }
     
     func slidePanableViewToBottom() {

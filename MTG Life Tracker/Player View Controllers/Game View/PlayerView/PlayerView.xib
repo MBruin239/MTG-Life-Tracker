@@ -16,6 +16,7 @@
                 <outlet property="optionsView" destination="sKE-qX-sGJ" id="kG2-qI-w18"/>
                 <outlet property="pannableView" destination="0kj-6J-Gqh" id="uhQ-tt-hS0"/>
                 <outlet property="playerLifeView" destination="bwY-ds-HSD" id="Hra-p2-yUU"/>
+                <outlet property="scrollView" destination="VzQ-Xj-DGU" id="M2z-i2-NS0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -34,30 +35,57 @@
                             <rect key="frame" x="0.0" y="0.0" width="438" height="300"/>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UDS-hV-3LQ">
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="VzQ-Xj-DGU">
                             <rect key="frame" x="0.0" y="0.0" width="438" height="300"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwY-ds-HSD" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CbV-ec-V3X">
                                     <rect key="frame" x="0.0" y="0.0" width="438" height="300"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UDS-hV-3LQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="438" height="300"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwY-ds-HSD" customClass="LifeTrackerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="438" height="300"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="UDS-hV-3LQ" secondAttribute="bottom" id="2MA-oM-wX0"/>
+                                        <constraint firstAttribute="trailing" secondItem="UDS-hV-3LQ" secondAttribute="trailing" id="9IE-PT-3jd"/>
+                                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="leading" secondItem="CbV-ec-V3X" secondAttribute="leading" id="BVU-r6-9mm"/>
+                                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="centerX" secondItem="CbV-ec-V3X" secondAttribute="centerX" id="H9a-gl-1oF"/>
+                                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="centerY" secondItem="CbV-ec-V3X" secondAttribute="centerY" id="MS7-sN-qeI"/>
+                                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="top" secondItem="CbV-ec-V3X" secondAttribute="top" id="aYO-Ec-KGu"/>
+                                    </constraints>
                                 </view>
                             </subviews>
-                        </stackView>
+                            <constraints>
+                                <constraint firstItem="CbV-ec-V3X" firstAttribute="top" secondItem="BC9-G5-d8v" secondAttribute="top" id="O7m-UT-KA1"/>
+                                <constraint firstItem="CbV-ec-V3X" firstAttribute="bottom" secondItem="BC9-G5-d8v" secondAttribute="bottom" id="OXb-OI-1Kh"/>
+                                <constraint firstItem="CbV-ec-V3X" firstAttribute="height" secondItem="L2k-nO-Wz5" secondAttribute="height" id="XFL-X9-eQ2"/>
+                                <constraint firstItem="CbV-ec-V3X" firstAttribute="leading" secondItem="BC9-G5-d8v" secondAttribute="leading" id="b3D-5E-m3W"/>
+                                <constraint firstItem="CbV-ec-V3X" firstAttribute="width" secondItem="L2k-nO-Wz5" secondAttribute="width" priority="750" id="f7R-xS-Tz4"/>
+                                <constraint firstItem="CbV-ec-V3X" firstAttribute="trailing" secondItem="BC9-G5-d8v" secondAttribute="trailing" id="fAQ-Jv-dlS"/>
+                            </constraints>
+                            <viewLayoutGuide key="contentLayoutGuide" id="BC9-G5-d8v"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="L2k-nO-Wz5"/>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="centerY" secondItem="0kj-6J-Gqh" secondAttribute="centerY" id="0V7-Zu-UFP"/>
                         <constraint firstAttribute="trailing" secondItem="6TR-CI-bmb" secondAttribute="trailing" id="6NJ-QT-c6S"/>
-                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="centerY" secondItem="0kj-6J-Gqh" secondAttribute="centerY" id="9ek-Sk-Row"/>
-                        <constraint firstAttribute="bottom" secondItem="UDS-hV-3LQ" secondAttribute="bottom" id="BkJ-vF-fN4"/>
-                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" id="I1V-ad-XRI"/>
-                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="centerX" secondItem="0kj-6J-Gqh" secondAttribute="centerX" id="Rvf-ns-xWh"/>
-                        <constraint firstAttribute="trailing" secondItem="UDS-hV-3LQ" secondAttribute="trailing" id="Vc5-0O-8Rj"/>
+                        <constraint firstAttribute="bottom" secondItem="VzQ-Xj-DGU" secondAttribute="bottom" id="8b0-Cb-UzZ"/>
+                        <constraint firstAttribute="trailing" secondItem="VzQ-Xj-DGU" secondAttribute="trailing" id="W3H-D3-Q9i"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="centerX" secondItem="0kj-6J-Gqh" secondAttribute="centerX" id="aqw-Vt-iqj"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" id="hFt-6o-zxZ"/>
-                        <constraint firstItem="UDS-hV-3LQ" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" id="tup-y0-Mb4"/>
+                        <constraint firstItem="VzQ-Xj-DGU" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" id="iVQ-e7-th9"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" id="uFR-Zc-fzI"/>
                         <constraint firstAttribute="bottom" secondItem="6TR-CI-bmb" secondAttribute="bottom" id="wMu-pB-zAk"/>
+                        <constraint firstItem="VzQ-Xj-DGU" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" id="zp5-Qn-cRf"/>
                     </constraints>
                 </view>
             </subviews>
