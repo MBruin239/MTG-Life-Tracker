@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoPlayersView" customModule="MTG_Life_Tracker" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="tXW-bQ-nSD"/>
+                <outlet property="menuButton" destination="x6X-u6-HqV" id="0L4-Xb-6UB"/>
                 <outlet property="playerView1" destination="b2b-xH-S0X" id="Sin-G3-4sB"/>
                 <outlet property="playerView2" destination="smw-pO-ki0" id="8g1-km-5w6"/>
             </connections>
@@ -33,14 +34,16 @@
                         </view>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6X-u6-HqV">
-                    <rect key="frame" x="184.5" y="423" width="45.5" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6X-u6-HqV" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                    <rect key="frame" x="185" y="423" width="44" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="O0J-Ln-hhG"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Rwy-Hq-wnc"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="gearshape.fill" catalog="system"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="gearshape.fill" catalog="system"/>
                     <connections>
                         <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="c5O-H2-0Em"/>
                     </connections>

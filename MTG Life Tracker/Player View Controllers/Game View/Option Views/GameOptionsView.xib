@@ -15,6 +15,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="q2p-lL-GTT"/>
                 <outlet property="diceButton" destination="FjU-lI-1m2" id="t53-Pa-4eS"/>
                 <outlet property="resetButton" destination="FY2-El-921" id="3cv-Py-Bzy"/>
+                <outlet property="selectorButton" destination="wg9-OW-WOq" id="GOb-sv-wHf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,7 +41,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fAN-Jn-3Vi">
-                            <rect key="frame" x="97" y="398" width="220" height="100"/>
+                            <rect key="frame" x="37" y="398" width="340" height="100"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FY2-El-921" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -55,8 +56,24 @@
                                         <action selector="resetButtonPress" destination="-1" eventType="primaryActionTriggered" id="Nr9-CK-Y04"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-lI-1m2" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wg9-OW-WOq" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
                                     <rect key="frame" x="120" y="0.0" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="HZj-GO-ysU"/>
+                                        <constraint firstAttribute="width" constant="100" id="a1E-tu-3Ep"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                    <state key="normal" title="Selector">
+                                        <imageReference key="image" image="person.3.fill" catalog="system" symbolScale="large"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="selectorButtonPress" destination="-1" eventType="primaryActionTriggered" id="OSa-jm-BYv"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjU-lI-1m2" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="240" y="0.0" width="100" height="100"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="V66-If-ldg"/>
                                         <constraint firstAttribute="height" constant="100" id="btQ-hl-Tx4"/>
@@ -67,6 +84,9 @@
                                     <state key="normal" title="Dice">
                                         <imageReference key="image" image="dice.fill" catalog="system" symbolScale="large"/>
                                     </state>
+                                    <connections>
+                                        <action selector="diceButtonPress" destination="-1" eventType="primaryActionTriggered" id="faf-O3-8Lx"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -110,6 +130,7 @@
     <resources>
         <image name="arrow.counterclockwise" catalog="system" width="115" height="128"/>
         <image name="dice.fill" catalog="system" width="128" height="113"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

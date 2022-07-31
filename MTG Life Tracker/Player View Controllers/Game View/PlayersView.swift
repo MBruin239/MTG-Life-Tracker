@@ -18,10 +18,16 @@ class PlayersView: CustomView {
     
     var delegate: PlayersViewDelegate?
     
+    @IBOutlet var menuButton: CustomButton!
+    
     var optionsView: GameOptionsView = GameOptionsView()
     
     func setup() {
         optionsView.delegate = self
+        
+        menuButton.cornerRadius = 22.5
+        menuButton.contentHorizontalAlignment = .fill
+        menuButton.contentVerticalAlignment = .fill
     }
     
     func openGameOptionsView(){

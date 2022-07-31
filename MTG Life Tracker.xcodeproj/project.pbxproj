@@ -50,6 +50,10 @@
 		71976EB128922E9700FAEA93 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB028922E9700FAEA93 /* CustomButton.swift */; };
 		71976EB32894B66600FAEA93 /* GameOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB22894B66600FAEA93 /* GameOptionsView.swift */; };
 		71976EB52894B67900FAEA93 /* GameOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71976EB42894B67900FAEA93 /* GameOptionsView.xib */; };
+		71976EB72896D87A00FAEA93 /* DiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71976EB62896D87A00FAEA93 /* DiceView.xib */; };
+		71976EBA2896D89800FAEA93 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB92896D89800FAEA93 /* DiceView.swift */; };
+		71976EBC2896DA2E00FAEA93 /* DiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EBB2896DA2E00FAEA93 /* DiceButton.swift */; };
+		71976EBE2897011F00FAEA93 /* GameOptionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EBD2897011F00FAEA93 /* GameOptionViewProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +121,10 @@
 		71976EB028922E9700FAEA93 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		71976EB22894B66600FAEA93 /* GameOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionsView.swift; sourceTree = "<group>"; };
 		71976EB42894B67900FAEA93 /* GameOptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameOptionsView.xib; sourceTree = "<group>"; };
+		71976EB62896D87A00FAEA93 /* DiceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiceView.xib; sourceTree = "<group>"; };
+		71976EB92896D89800FAEA93 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		71976EBB2896DA2E00FAEA93 /* DiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceButton.swift; sourceTree = "<group>"; };
+		71976EBD2897011F00FAEA93 /* GameOptionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionViewProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,12 +231,16 @@
 		716553B4288F6FA400FB64FB /* Option Views */ = {
 			isa = PBXGroup;
 			children = (
+				71976EBD2897011F00FAEA93 /* GameOptionViewProvider.swift */,
 				71976EB22894B66600FAEA93 /* GameOptionsView.swift */,
 				71976EB42894B67900FAEA93 /* GameOptionsView.xib */,
 				716553B5288F6FF800FB64FB /* PlayerSelectorView.swift */,
 				716553B7288F701500FB64FB /* PlayerSelectorView.xib */,
 				71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */,
 				71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */,
+				71976EB92896D89800FAEA93 /* DiceView.swift */,
+				71976EB62896D87A00FAEA93 /* DiceView.xib */,
+				71976EBB2896DA2E00FAEA93 /* DiceButton.swift */,
 			);
 			path = "Option Views";
 			sourceTree = "<group>";
@@ -396,6 +408,7 @@
 				716553B8288F701500FB64FB /* PlayerSelectorView.xib in Resources */,
 				71976EB52894B67900FAEA93 /* GameOptionsView.xib in Resources */,
 				716553A0288ED70C00FB64FB /* ThreePlayersView.xib in Resources */,
+				71976EB72896D87A00FAEA93 /* DiceView.xib in Resources */,
 				716553A8288EDADC00FB64FB /* FivePlayersView.xib in Resources */,
 				716553A6288EDA2D00FB64FB /* FourPlayersView.xib in Resources */,
 				71976EAF2891E68F00FAEA93 /* CountersSelectorView.xib in Resources */,
@@ -430,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7165539C288ECE3F00FB64FB /* TwoPlayersView.swift in Sources */,
+				71976EBA2896D89800FAEA93 /* DiceView.swift in Sources */,
 				7165538D288E002F00FB64FB /* MainCoordinator.swift in Sources */,
 				7165537D288DF80B00FB64FB /* OptionsViewController.swift in Sources */,
 				7165539A288EC18C00FB64FB /* CustomView.swift in Sources */,
@@ -447,11 +461,13 @@
 				71976EB128922E9700FAEA93 /* CustomButton.swift in Sources */,
 				71655398288EC14400FB64FB /* PlayersView.swift in Sources */,
 				7175EB2C288C70EB009AA437 /* PlayersViewController.swift in Sources */,
+				71976EBE2897011F00FAEA93 /* GameOptionViewProvider.swift in Sources */,
 				71976EAD2891E68300FAEA93 /* CountersSelectorView.swift in Sources */,
 				716553A2288ED72400FB64FB /* ThreePlayersView.swift in Sources */,
 				71655383288DFE9600FB64FB /* StartingLifeTotalView.swift in Sources */,
 				71655385288DFF0700FB64FB /* NumberOfPlayersView.swift in Sources */,
 				716553B1288F115300FB64FB /* PlayerView.swift in Sources */,
+				71976EBC2896DA2E00FAEA93 /* DiceButton.swift in Sources */,
 				716553AC288EDBF200FB64FB /* SixPlayersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

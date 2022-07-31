@@ -19,6 +19,7 @@ class GameOptionsView: CustomView {
     
     @IBOutlet var closeButton: CustomButton!
     @IBOutlet var resetButton: CustomButton!
+    @IBOutlet var selectorButton: CustomButton!
     @IBOutlet var diceButton: CustomButton!
 
     override func commonInit() {
@@ -31,6 +32,8 @@ class GameOptionsView: CustomView {
         
         resetButton.centerVertically()
         diceButton.centerVertically()
+        selectorButton.centerVertically()
+
     }
     
     @IBAction func closeButtonPress() {
@@ -43,5 +46,16 @@ class GameOptionsView: CustomView {
     
     @IBAction func resetButtonPress() {
         delegate?.resetGameToStart()
+    }
+    
+    @IBAction func selectorButtonPress() {
+        let selectorView = GameOptionViewProvider.showPlayerSelectorView(container: self)
+        self.addSubview(selectorView)
+        
+    }
+    
+    @IBAction func diceButtonPress() {
+        let diceView = GameOptionViewProvider.showDiceView(container: self)
+        self.addSubview(diceView)
     }
 }

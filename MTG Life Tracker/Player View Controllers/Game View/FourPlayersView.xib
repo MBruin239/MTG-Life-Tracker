@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FourPlayersView" customModule="MTG_Life_Tracker" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="ndb-7F-p55"/>
+                <outlet property="menuButton" destination="8BM-op-zAV" id="DLd-av-aZ5"/>
                 <outlet property="player1Parrent" destination="9pT-rP-o7c" id="ofY-kf-VDd"/>
                 <outlet property="player2Parrent" destination="XDO-Se-DSU" id="pbL-7H-ECs"/>
                 <outlet property="player3Parrent" destination="A6U-6N-7ue" id="OqB-6B-Onq"/>
@@ -52,14 +53,16 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BM-op-zAV">
-                    <rect key="frame" x="184.5" y="423" width="45.5" height="50"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BM-op-zAV" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                    <rect key="frame" x="185" y="423" width="44" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="AzN-AF-qDp"/>
                         <constraint firstAttribute="height" constant="50" id="gZX-Rf-aaJ"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="gearshape.fill" catalog="system"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="gearshape.fill" catalog="system"/>
                     <connections>
                         <action selector="menuButtonPress" destination="-1" eventType="primaryActionTriggered" id="215-aD-FqZ"/>
                     </connections>
