@@ -39,6 +39,7 @@ extension OptionsViewController: NumberOfPlayersViewDelegate {
 
     func setNumberOfPlayers(playerCount: PlayerCount) {
         numberOfPlayers = playerCount
+        selectorView.expectedNumberOfPlayers = numberOfPlayers!
         selectorView.transitionInFromRight(container: self.view, oldView: numberOfPlayersView, removeOld: true)
         selectorView.delegate = self
     }

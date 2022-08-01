@@ -101,6 +101,7 @@ class PlayerSelectorView: CustomView {
     }
     
     @objc func transitionAway() {
+        playerSelectorTimer?.invalidate()
         delegate?.playerWasSelected()
     }
 }
