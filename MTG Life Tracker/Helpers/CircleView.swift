@@ -8,7 +8,7 @@
 import UIKit
 
 class CircleView: UIView {
-    var initialCenter: CGPoint = .zero
+    var lastCenter: CGPoint = .zero
     var index: Int = 0
 
     override init(frame: CGRect) {
@@ -26,24 +26,44 @@ class CircleView: UIView {
         maskLayer.path = UIBezierPath(ovalIn: self.bounds).cgPath;
         self.layer.mask = maskLayer
         self.backgroundColor = .random()
-        
-       // let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
-       // self.addGestureRecognizer(panGestureRecognizer)
     }
     
-    @objc private func didPan(_ sender: UIPanGestureRecognizer) {
-        switch sender.state {
-        case .began:
-            initialCenter = sender.location(in: superview)
-        case .changed:
-            let translation = sender.translation(in: superview)
-            
-            self.center = CGPoint(x: self.initialCenter.x + translation.x,
-                                          y: self.initialCenter.y + translation.y)
-        case .ended, .cancelled:
-            break
-        default:
-            break
-        }
+    func changeFrame(frame: CGRect) {
+        self.layer.mask?.removeFromSuperlayer()
+        self.layer.frame = frame
+        self.center = lastCenter
+        
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = UIBezierPath(ovalIn: self.bounds).cgPath;
+        self.layer.mask = maskLayer
+    }
+    
+    func startAnimations() {
+        let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+        pulseAnimation.duration = 1
+        pulseAnimation.fromValue = 1
+        pulseAnimation.toValue = 0.5
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = .greatestFiniteMagnitude
+        self.layer.add(pulseAnimation, forKey: nil)
+        
+        let growAnimationX = CABasicAnimation(keyPath: "transform.scale.x")
+        growAnimationX.duration = 1
+        growAnimationX.fromValue = 1
+        growAnimationX.toValue = 1.5
+        growAnimationX.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        growAnimationX.autoreverses = true
+        growAnimationX.repeatCount = .greatestFiniteMagnitude
+        self.layer.add(growAnimationX, forKey: nil)
+        
+        let growAnimationY = CABasicAnimation(keyPath: "transform.scale.y")
+        growAnimationY.duration = 1
+        growAnimationY.fromValue = 1
+        growAnimationY.toValue = 1.5
+        growAnimationY.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        growAnimationY.autoreverses = true
+        growAnimationY.repeatCount = .greatestFiniteMagnitude
+        self.layer.add(growAnimationY, forKey: nil)
     }
 }

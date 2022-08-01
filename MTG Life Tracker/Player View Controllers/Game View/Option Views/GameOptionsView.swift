@@ -17,6 +17,13 @@ class GameOptionsView: CustomView {
     
     var delegate: GameOptionsViewDelegate?
     
+    var numberOfPlayers: PlayerCount = .two
+    
+    @IBOutlet var mainView: CustomView!
+    var selectorView: PlayerSelectorView?
+    var diceView: DiceView?
+    
+    @IBOutlet var menuButton: CustomButton!
     @IBOutlet var closeButton: CustomButton!
     @IBOutlet var resetButton: CustomButton!
     @IBOutlet var selectorButton: CustomButton!
@@ -27,13 +34,16 @@ class GameOptionsView: CustomView {
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
         
+        menuButton.cornerRadius = 10
+        
         closeButton.contentHorizontalAlignment = .fill
         closeButton.contentVerticalAlignment = .fill
         
         resetButton.centerVertically()
         diceButton.centerVertically()
         selectorButton.centerVertically()
-
+        
+        self.addBlurEffect(alpha: 0.9)
     }
     
     @IBAction func closeButtonPress() {
@@ -49,13 +59,24 @@ class GameOptionsView: CustomView {
     }
     
     @IBAction func selectorButtonPress() {
-        let selectorView = GameOptionViewProvider.showPlayerSelectorView(container: self)
-        self.addSubview(selectorView)
-        
+        selectorView = GameOptionViewProvider.showPlayerSelectorView(container: self, numberOfPlayers: numberOfPlayers, delegate: self)
+        selectorView?.transitionInFromRight(container: self.contentView, oldView: self.mainView, removeOld: false)
     }
     
     @IBAction func diceButtonPress() {
-        let diceView = GameOptionViewProvider.showDiceView(container: self)
-        self.addSubview(diceView)
+        diceView = GameOptionViewProvider.showDiceView(container: self, delegate: self)
+        diceView?.transitionInFromRight(container: self.contentView, oldView: self.mainView, removeOld: false)
+    }
+}
+
+extension GameOptionsView: PlayerSelectorViewDelegate {
+    func playerWasSelected() {
+        self.mainView.transitionInFromLeft(container: self.contentView, oldView: selectorView!, removeOld: true)
+    }
+}
+
+extension GameOptionsView: DiceViewDelegate {
+    func dismissView() {
+        self.mainView.transitionInFromLeft(container: self.contentView, oldView: diceView!, removeOld: true)
     }
 }

@@ -7,12 +7,12 @@
 
 import UIKit
 
-enum PlayerCount {
-    case two
-    case three
-    case four
-    case five
-    case six
+enum PlayerCount: Int {
+    case two = 2
+    case three = 3
+    case four = 4
+    case five = 5
+    case six = 6
 }
 
 protocol NumberOfPlayersViewDelegate {

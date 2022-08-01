@@ -45,6 +45,7 @@ class PlayersViewController: UIViewController {
                 playersView = SixPlayersView()
                 break
         }
+        playersView?.numberOfPlayers = numberOfPlayers
         playersView?.delegate = self
     }
 }

@@ -169,7 +169,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" white="0.33333333333333331" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="4dk-yk-9lQ" firstAttribute="top" secondItem="2AR-3r-6ff" secondAttribute="bottom" priority="750" constant="40" id="B4N-En-Jft"/>
                 <constraint firstItem="2AR-3r-6ff" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cFt-tZ-yOs" secondAttribute="bottom" constant="10" id="HRK-9v-CpU"/>

@@ -24,6 +24,15 @@ class CustomView: UIView {
     func commonInit() {
         
     }
+    
+    func addBlurEffect(alpha: Double){
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView.alpha = alpha
+        self.insertSubview(blurEffectView, belowSubview: self.contentView)
+    }
 }
 
 extension UIView
@@ -44,7 +53,7 @@ extension UIView
         container.addSubview(self);
     }
     
-    func transitionInFromRight(container: UIView!, oldView: UIView){
+    func transitionInFromRight(container: UIView!, oldView: UIView, removeOld: Bool){
         self.frame = CGRect.init(x: 2*container.frame.width, y: 0, width: container.frame.width, height: container.frame.height)
         container.addSubview(self)
         
@@ -52,11 +61,13 @@ extension UIView
             oldView.center = CGPoint.init(x: -1*oldView.frame.width, y: oldView.center.y)
             self.center = container.center
         }, completion: {_ in
-            oldView.removeFromSuperview()
+            if removeOld {
+                oldView.removeFromSuperview()
+            }
         })
     }
     
-    func transitionInFromLeft(container: UIView!, oldView: UIView){
+    func transitionInFromLeft(container: UIView!, oldView: UIView, removeOld: Bool){
         self.frame = CGRect.init(x: -1*container.frame.width, y: 0, width: container.frame.width, height: container.frame.height)
         container.addSubview(self)
         
@@ -64,7 +75,9 @@ extension UIView
             oldView.center = CGPoint.init(x: 2*oldView.frame.width, y: oldView.center.y)
             self.center = container.center
         }, completion: {_ in
-            oldView.removeFromSuperview()
+            if removeOld {
+                oldView.removeFromSuperview()
+            }
         })
     }
 }

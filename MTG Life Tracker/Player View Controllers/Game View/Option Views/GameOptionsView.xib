@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +13,8 @@
                 <outlet property="closeButton" destination="HIi-sj-y1p" id="nuK-yp-IvO"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="q2p-lL-GTT"/>
                 <outlet property="diceButton" destination="FjU-lI-1m2" id="t53-Pa-4eS"/>
+                <outlet property="mainView" destination="VnK-eE-4VH" id="L9A-AX-lCe"/>
+                <outlet property="menuButton" destination="rkc-Nf-kqc" id="pvw-t7-4b3"/>
                 <outlet property="resetButton" destination="FY2-El-921" id="3cv-Py-Bzy"/>
                 <outlet property="selectorButton" destination="wg9-OW-WOq" id="GOb-sv-wHf"/>
             </connections>
@@ -23,7 +24,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-eE-4VH">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-eE-4VH" customClass="CustomView" customModule="MTG_Life_Tracker" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-Nf-kqc" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
@@ -62,12 +63,10 @@
                                         <constraint firstAttribute="height" constant="100" id="HZj-GO-ysU"/>
                                         <constraint firstAttribute="width" constant="100" id="a1E-tu-3Ep"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                    <state key="normal" title="Selector">
-                                        <imageReference key="image" image="person.3.fill" catalog="system" symbolScale="large"/>
-                                    </state>
+                                    <state key="normal" title="Selector" image="person.3.fill" catalog="system"/>
                                     <connections>
                                         <action selector="selectorButtonPress" destination="-1" eventType="primaryActionTriggered" id="OSa-jm-BYv"/>
                                     </connections>
@@ -104,7 +103,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="HIi-sj-y1p" secondAttribute="trailing" constant="10" id="2IT-9R-LgV"/>
                         <constraint firstItem="fAN-Jn-3Vi" firstAttribute="centerX" secondItem="VnK-eE-4VH" secondAttribute="centerX" id="4YN-Y5-cOv"/>
@@ -117,7 +116,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="VnK-eE-4VH" secondAttribute="bottom" id="C2J-c2-Zzo"/>
                 <constraint firstItem="VnK-eE-4VH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="b8w-b9-bmx"/>
@@ -132,8 +131,5 @@
         <image name="dice.fill" catalog="system" width="128" height="113"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

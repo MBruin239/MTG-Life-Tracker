@@ -8,8 +8,14 @@
 import Foundation
 import UIKit
 
+protocol DiceViewDelegate {
+    func dismissView()
+}
+
 class DiceView: CustomView {
     let kCONTENT_XIB_NAME = "DiceView"
+    
+    var delegate: DiceViewDelegate?
     
     @IBOutlet var rollLabel: UILabel!
     
@@ -45,6 +51,8 @@ class DiceView: CustomView {
         oneHundredButton.numberOfSides = 100
         
         numberOfDicePickerView.layer.cornerRadius = 10
+        
+        self.addBlurEffect(alpha: 0.9)
     }
     
     @IBAction func diceButtonPress(_ sender: DiceButton) {
@@ -54,7 +62,7 @@ class DiceView: CustomView {
     }
     
     @IBAction func closeButtonPress(_ sender: CustomButton) {
-        self.removeFromSuperview()
+        delegate?.dismissView()
     }
     
     func rollDice(sides: Int, numberOfDice: Int) -> Int {

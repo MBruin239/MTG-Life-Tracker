@@ -15,6 +15,7 @@ protocol PlayersViewDelegate {
 
 class PlayersView: CustomView {
     var startingLifeTotal: Int = 40
+    var numberOfPlayers: PlayerCount = .two
     
     var delegate: PlayersViewDelegate?
     
@@ -32,6 +33,7 @@ class PlayersView: CustomView {
     
     func openGameOptionsView(){
         optionsView.frame = self.frame
+        optionsView.numberOfPlayers = numberOfPlayers
         self.addSubview(optionsView)
     }
     
