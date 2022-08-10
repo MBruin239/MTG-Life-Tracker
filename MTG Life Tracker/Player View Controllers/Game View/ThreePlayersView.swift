@@ -38,5 +38,9 @@ class ThreePlayersView: PlayersView {
         playerView1.delegate = self
         playerView2.delegate = self
         playerView3.delegate = self
+        
+        playersViewsArray.append(playerView1)
+        playersViewsArray.append(playerView2)
+        playersViewsArray.append(playerView3)
     }
 }

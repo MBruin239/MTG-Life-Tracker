@@ -56,6 +56,7 @@ class GameOptionsView: CustomView {
     
     @IBAction func resetButtonPress() {
         delegate?.resetGameToStart()
+        self.removeFromSuperview()
     }
     
     @IBAction func selectorButtonPress() {

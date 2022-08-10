@@ -49,13 +49,105 @@ class PlayerView: CustomView {
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(didPan(_:)))
         pannableView.addGestureRecognizer(panGestureRecognizer)
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
-        optionsView.addGestureRecognizer(tapGestureRecognizer)
-        
-        playerLifeView.contentView.backgroundColor = UIColor.random()
+        let theColor = UIColor.random()
+        playerLifeView.contentView.backgroundColor = theColor
+        optionsView.theColor = theColor
         
         let widthConstraint = NSLayoutConstraint(item: playerLifeView!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 150)
         playerLifeView.addConstraints([widthConstraint])
+    }
+    
+    func resetGame(with startingLifeTotal: Int){
+        playerLifeView.lifeTotal = startingLifeTotal
+        removeAllCounterViews()
+    }
+    
+    func slidePanableViewToBottom() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
+            let leftOverAmount = pannableView.frame.height * 0.8
+            let rect = CGRect.init(x: contentView.frame.origin.x, y: leftOverAmount, width: contentView.frame.width, height: contentView.frame.height)
+            pannableView.frame = rect
+        }
+        // Disable the top button so you don't change the life trying to pan the view around
+        playerLifeView.topButton.isEnabled = false
+    }
+    
+    func slidePanableViewToTop() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
+            pannableView.center = contentView.center
+        }
+        // Make sure the top button is re-enabled when back to normal positioning
+        playerLifeView.topButton.isEnabled = true
+    }
+    
+    @objc private func didPan(_ sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began:
+            initialCenter = pannableView.center
+        case .changed:
+            let translation = sender.translation(in: self.contentView)
+            
+            if initialCenter.y + translation.y < contentView.center.y {
+                return
+            }
+            
+            pannableView.center = CGPoint(x: initialCenter.x,
+                                          y: initialCenter.y + translation.y)
+        case .ended, .cancelled:
+            let translation = sender.translation(in: self.contentView)
+            
+            if translation.y > initialCenter.y {
+                slidePanableViewToBottom()
+            } else {
+                slidePanableViewToTop()
+            }
+        default:
+            break
+        }
+    }
+}
+
+extension PlayerView: OptionsViewDelegate {
+    func closeOptionsView() {
+        slidePanableViewToTop()
+    }
+    
+    func setBackgroundColor(color: UIColor) {
+        playerLifeView.contentView.backgroundColor = color
+    }
+
+    func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)]) {
+        // First we need to see if any counter views need removed
+        checkIfCounterViewsNeedRemoved(counterTypeArray: counterTypeArray)
+        
+        for counterTuple in counterTypeArray {
+                let counterType = counterTuple.0
+            if !checkIfCounterViewExists(counterType: counterType){
+                if let image = counterTuple.1 {
+                    let counterView = makeCounterView(counterType: counterType, image: image)
+                    counterView.contentView.backgroundColor = playerLifeView.contentView.backgroundColor
+                    addCounterViewToStack(view: counterView)
+                }
+            }
+        }
+        // Move the view back up automatically
+        slidePanableViewToTop()
+    }
+    
+    func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
+        delegate?.openCounterSelectorView(counterSelectorView: counterSelectorView)
+    }
+}
+
+extension PlayerView {
+    
+    private func removeAllCounterViews() {
+        for view in countersStack.subviews {
+            if let counterView = view as? LifeTrackerView {
+                counterView.removeFromSuperview()
+            }
+        }
+        countersStack.isHidden = true
     }
     
     func checkIfCounterViewExists(counterType: CounterType) -> Bool {
@@ -122,78 +214,4 @@ class PlayerView: CustomView {
         
         changeMainStackDistribution()
     }
-    
-    func slidePanableViewToBottom() {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-            let leftOverAmount = pannableView.frame.height * 0.8
-            let rect = CGRect.init(x: contentView.frame.origin.x, y: leftOverAmount, width: contentView.frame.width, height: contentView.frame.height)
-            pannableView.frame = rect
-        }
-        // Disable the top button so you don't change the life trying to pan the view around
-        playerLifeView.topButton.isEnabled = false
-    }
-    
-    func slidePanableViewToTop() {
-        UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-            pannableView.center = contentView.center
-        }
-        // Make sure the top button is re-enabled when back to normal positioning
-        playerLifeView.topButton.isEnabled = true
-    }
-    
-    @objc private func didPan(_ sender: UIPanGestureRecognizer) {
-        switch sender.state {
-        case .began:
-            initialCenter = pannableView.center
-        case .changed:
-            let translation = sender.translation(in: self.contentView)
-            
-            if initialCenter.y + translation.y < contentView.center.y {
-                return
-            }
-            
-            pannableView.center = CGPoint(x: initialCenter.x,
-                                          y: initialCenter.y + translation.y)
-        case .ended, .cancelled:
-            let translation = sender.translation(in: self.contentView)
-            
-            if translation.y > initialCenter.y {
-                slidePanableViewToBottom()
-            } else {
-                slidePanableViewToTop()
-            }
-        default:
-            break
-        }
-    }
-    
-    @objc private func didTap(_ sender: UITapGestureRecognizer) {
-        slidePanableViewToTop()
-    }
-
-}
-
-extension PlayerView: OptionsViewDelegate {
-    func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)]) {
-        // First we need to see if any counter views need removed
-        checkIfCounterViewsNeedRemoved(counterTypeArray: counterTypeArray)
-        
-        for counterTuple in counterTypeArray {
-                let counterType = counterTuple.0
-            if !checkIfCounterViewExists(counterType: counterType){
-                if let image = counterTuple.1 {
-                    let counterView = makeCounterView(counterType: counterType, image: image)
-                    counterView.contentView.backgroundColor = playerLifeView.contentView.backgroundColor
-                    addCounterViewToStack(view: counterView)
-                }
-            }
-        }
-        // Move the view back up automatically
-        slidePanableViewToTop()
-    }
-    
-    func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
-        delegate?.openCounterSelectorView(counterSelectorView: counterSelectorView)
-    }
-    
 }

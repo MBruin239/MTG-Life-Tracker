@@ -13,6 +13,14 @@ enum CounterType {
     case book
     case theature
     case sun
+    case paperPlane
+    case moon
+    case cloud
+    case snow
+    case umbrella
+    case flame
+    case club
+    case spade
 }
 
 protocol CountersSelectorViewDelegate {
@@ -30,6 +38,14 @@ class CountersSelectorView: CustomView {
     @IBOutlet var bookButton: CustomButton!
     @IBOutlet var theatureButton: CustomButton!
     @IBOutlet var sunButton: CustomButton!
+    @IBOutlet var paperPlaneButton: CustomButton!
+    @IBOutlet var moonButton: CustomButton!
+    @IBOutlet var snowButton: CustomButton!
+    @IBOutlet var cloudButton: CustomButton!
+    @IBOutlet var umbrellaButton: CustomButton!
+    @IBOutlet var flameButton: CustomButton!
+    @IBOutlet var clubButton: CustomButton!
+    @IBOutlet var spadeButton: CustomButton!
     
     @IBOutlet var doneButton: CustomButton!
 
@@ -45,6 +61,22 @@ class CountersSelectorView: CustomView {
         theatureButton.setupCounterButton(counterType: .theature)
 
         sunButton.setupCounterButton(counterType: .sun)
+        
+        paperPlaneButton.setupCounterButton(counterType: .paperPlane)
+
+        moonButton.setupCounterButton(counterType: .moon)
+
+        snowButton.setupCounterButton(counterType: .snow)
+
+        cloudButton.setupCounterButton(counterType: .cloud)
+        
+        umbrellaButton.setupCounterButton(counterType: .umbrella)
+
+        flameButton.setupCounterButton(counterType: .flame)
+
+        clubButton.setupCounterButton(counterType: .club)
+
+        spadeButton.setupCounterButton(counterType: .spade)
         
         doneButton.cornerRadius = 10.0
         

@@ -45,6 +45,8 @@
 		7175EB28288C54AA009AA437 /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7175EB27288C54AA009AA437 /* OptionsView.xib */; };
 		7175EB2A288C54B9009AA437 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB29288C54B9009AA437 /* OptionsView.swift */; };
 		7175EB2C288C70EB009AA437 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175EB2B288C70EB009AA437 /* PlayersViewController.swift */; };
+		7184387D28A43B4400F22F0F /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7184387C28A43B4400F22F0F /* ColorPickerView.xib */; };
+		7184387F28A43D1800F22F0F /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184387E28A43D1800F22F0F /* ColorPickerView.swift */; };
 		71976EAD2891E68300FAEA93 /* CountersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */; };
 		71976EAF2891E68F00FAEA93 /* CountersSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */; };
 		71976EB128922E9700FAEA93 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB028922E9700FAEA93 /* CustomButton.swift */; };
@@ -116,6 +118,8 @@
 		7175EB27288C54AA009AA437 /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
 		7175EB29288C54B9009AA437 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		7175EB2B288C70EB009AA437 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		7184387C28A43B4400F22F0F /* ColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerView.xib; sourceTree = "<group>"; };
+		7184387E28A43D1800F22F0F /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 		71976EAC2891E68300FAEA93 /* CountersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountersSelectorView.swift; sourceTree = "<group>"; };
 		71976EAE2891E68F00FAEA93 /* CountersSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountersSelectorView.xib; sourceTree = "<group>"; };
 		71976EB028922E9700FAEA93 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				716553B2288F123B00FB64FB /* PlayerView.xib */,
 				7175EB29288C54B9009AA437 /* OptionsView.swift */,
 				7175EB27288C54AA009AA437 /* OptionsView.xib */,
+				7184387E28A43D1800F22F0F /* ColorPickerView.swift */,
+				7184387C28A43B4400F22F0F /* ColorPickerView.xib */,
 				7175EB25288C376D009AA437 /* LifeTrackerView.swift */,
 				7175EB23288C36F7009AA437 /* LifeTrackerView.xib */,
 			);
@@ -411,6 +417,7 @@
 				71976EB72896D87A00FAEA93 /* DiceView.xib in Resources */,
 				716553A8288EDADC00FB64FB /* FivePlayersView.xib in Resources */,
 				716553A6288EDA2D00FB64FB /* FourPlayersView.xib in Resources */,
+				7184387D28A43B4400F22F0F /* ColorPickerView.xib in Resources */,
 				71976EAF2891E68F00FAEA93 /* CountersSelectorView.xib in Resources */,
 				7175EB00288C3504009AA437 /* LaunchScreen.storyboard in Resources */,
 				71655381288DFD0E00FB64FB /* StartingLifeTotalView.xib in Resources */,
@@ -466,6 +473,7 @@
 				716553A2288ED72400FB64FB /* ThreePlayersView.swift in Sources */,
 				71655383288DFE9600FB64FB /* StartingLifeTotalView.swift in Sources */,
 				71655385288DFF0700FB64FB /* NumberOfPlayersView.swift in Sources */,
+				7184387F28A43D1800F22F0F /* ColorPickerView.swift in Sources */,
 				716553B1288F115300FB64FB /* PlayerView.swift in Sources */,
 				71976EBC2896DA2E00FAEA93 /* DiceButton.swift in Sources */,
 				716553AC288EDBF200FB64FB /* SixPlayersView.swift in Sources */,

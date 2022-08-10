@@ -27,7 +27,12 @@ class PlayersViewController: UIViewController {
         setup()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        UIApplication.shared.isIdleTimerDisabled = false
+    }
+    
     func setup() {
+        UIApplication.shared.isIdleTimerDisabled = true
         switch numberOfPlayers {
             case .two:
                 playersView = TwoPlayersView()
@@ -51,9 +56,6 @@ class PlayersViewController: UIViewController {
 }
 
 extension PlayersViewController: PlayersViewDelegate {
-    func resetGameToStart() {
-        setup()
-    }
     
     func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
         counterSelectorView.frame = self.view.frame

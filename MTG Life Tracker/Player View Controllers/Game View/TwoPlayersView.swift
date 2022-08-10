@@ -27,5 +27,9 @@ class TwoPlayersView: PlayersView {
         
         playerView1.delegate = self
         playerView2.delegate = self
+        
+        playersViewsArray.append(playerView1)
+        playersViewsArray.append(playerView2)
+
     }
 }

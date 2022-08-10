@@ -9,13 +9,13 @@ import UIKit
 
 protocol PlayersViewDelegate {
     func menuButtonPress()
-    func resetGameToStart()
     func openCounterSelectorView(counterSelectorView: CountersSelectorView)
 }
 
 class PlayersView: CustomView {
     var startingLifeTotal: Int = 40
     var numberOfPlayers: PlayerCount = .two
+    var playersViewsArray: [PlayerView] = []
     
     var delegate: PlayersViewDelegate?
     
@@ -29,6 +29,12 @@ class PlayersView: CustomView {
         menuButton.cornerRadius = 22.5
         menuButton.contentHorizontalAlignment = .fill
         menuButton.contentVerticalAlignment = .fill
+    }
+    
+    private func resetGameToTheStart() {
+        for playerView in playersViewsArray {
+            playerView.resetGame(with: startingLifeTotal)
+        }
     }
     
     func openGameOptionsView(){
@@ -50,7 +56,7 @@ extension PlayersView: PlayerViewDelegate {
 
 extension PlayersView: GameOptionsViewDelegate {
     func resetGameToStart() {
-        delegate?.resetGameToStart()
+        resetGameToTheStart()
     }
     
     func returnToMainMenu() {

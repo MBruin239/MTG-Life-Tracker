@@ -58,5 +58,12 @@ class SixPlayersView: PlayersView {
         playerView4.delegate = self
         playerView5.delegate = self
         playerView6.delegate = self
+        
+        playersViewsArray.append(playerView1)
+        playersViewsArray.append(playerView2)
+        playersViewsArray.append(playerView3)
+        playersViewsArray.append(playerView4)
+        playersViewsArray.append(playerView5)
+        playersViewsArray.append(playerView6)
     }
 }
