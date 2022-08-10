@@ -60,13 +60,19 @@ class PlayerView: CustomView {
     func resetGame(with startingLifeTotal: Int){
         playerLifeView.lifeTotal = startingLifeTotal
         removeAllCounterViews()
+        optionsView.resetOptions()
+        slidePanableViewToTop()
+    }
+    
+    func setPanableViewToBottom() {
+        let leftOverAmount = pannableView.frame.height * 0.8
+        let rect = CGRect.init(x: contentView.frame.origin.x, y: leftOverAmount, width: contentView.frame.width, height: contentView.frame.height)
+        pannableView.frame = rect
     }
     
     func slidePanableViewToBottom() {
         UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: [.curveEaseInOut]) { [self] in
-            let leftOverAmount = pannableView.frame.height * 0.8
-            let rect = CGRect.init(x: contentView.frame.origin.x, y: leftOverAmount, width: contentView.frame.width, height: contentView.frame.height)
-            pannableView.frame = rect
+            setPanableViewToBottom()
         }
         // Disable the top button so you don't change the life trying to pan the view around
         playerLifeView.topButton.isEnabled = false

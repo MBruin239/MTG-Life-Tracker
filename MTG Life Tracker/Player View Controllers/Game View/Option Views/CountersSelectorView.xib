@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -27,14 +27,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwX-hO-4HT">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft0-Z7-vMx" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                            <rect key="frame" x="112.66666666666669" y="684" width="150" height="50"/>
+                            <rect key="frame" x="120" y="594" width="150" height="50"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="L0W-E1-7vG"/>
@@ -48,176 +48,196 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Nxv-IQ-bHG">
-                            <rect key="frame" x="45" y="94" width="285" height="540"/>
+                            <rect key="frame" x="52.666666666666657" y="125" width="285" height="450"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ALh-bd-DUv">
-                                    <rect key="frame" x="0.0" y="0.0" width="75" height="540"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="450"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRs-0e-fyh" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="75" height="97.666666666666671"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="h9z-FI-dtR"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="star.fill" catalog="system"/>
+                                            <state key="normal" image="star.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="AZT-oZ-ZLq"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLV-N6-wQD" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="147.66666666666666" width="75" height="97.333333333333343"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="FQc-UM-r1j"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="125" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="book.fill" catalog="system"/>
+                                            <state key="normal" image="book.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="WIp-tB-7WL"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhY-8E-hQl" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="295" width="75" height="97.666666666666686"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="XXR-df-clC"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="250" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="theatermasks.fill" catalog="system"/>
+                                            <state key="normal" image="theatermasks.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="vOx-bK-hQI"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FK4-Hd-dwD" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="442.66666666666663" width="75" height="97.333333333333371"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="ORy-lr-hD6"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="375" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="sun.max.fill" catalog="system"/>
+                                            <state key="normal" image="sun.max.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="LbE-aK-IgR"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="jLV-N6-wQD" secondAttribute="trailing" id="17d-jG-cxD"/>
+                                        <constraint firstAttribute="trailing" secondItem="LhY-8E-hQl" secondAttribute="trailing" id="2VL-uO-Ifn"/>
+                                        <constraint firstItem="jLV-N6-wQD" firstAttribute="leading" secondItem="ALh-bd-DUv" secondAttribute="leading" id="G03-E3-AWM"/>
+                                        <constraint firstAttribute="bottom" secondItem="FK4-Hd-dwD" secondAttribute="bottom" id="Rgd-cr-EDZ"/>
+                                        <constraint firstItem="FK4-Hd-dwD" firstAttribute="leading" secondItem="ALh-bd-DUv" secondAttribute="leading" id="aHI-hc-DkH"/>
+                                        <constraint firstItem="yRs-0e-fyh" firstAttribute="top" secondItem="ALh-bd-DUv" secondAttribute="top" id="fFQ-vO-Zn2"/>
+                                        <constraint firstAttribute="trailing" secondItem="yRs-0e-fyh" secondAttribute="trailing" id="hMV-W2-AKS"/>
                                         <constraint firstAttribute="width" constant="75" id="imk-Po-iCC"/>
+                                        <constraint firstAttribute="trailing" secondItem="FK4-Hd-dwD" secondAttribute="trailing" id="oT6-VX-M5e"/>
+                                        <constraint firstItem="yRs-0e-fyh" firstAttribute="leading" secondItem="ALh-bd-DUv" secondAttribute="leading" id="x4M-2d-ZPe"/>
+                                        <constraint firstItem="LhY-8E-hQl" firstAttribute="leading" secondItem="ALh-bd-DUv" secondAttribute="leading" id="yuf-aN-5R5"/>
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-le-Nda">
-                                    <rect key="frame" x="105" y="0.0" width="75" height="540"/>
+                                    <rect key="frame" x="105" y="0.0" width="75" height="450"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hl-8h-D9Z" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="75" height="97.666666666666671"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="sx2-gA-eX3"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="paperplane.fill" catalog="system"/>
+                                            <state key="normal" image="paperplane.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="ugM-YH-wfW"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIm-5z-jNH" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="147.66666666666666" width="75" height="97.333333333333343"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="rpU-Pv-TpM"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="125" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="moon.fill" catalog="system"/>
+                                            <state key="normal" image="moon.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="23M-yk-jKa"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbW-b9-cB4" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="295" width="75" height="97.666666666666686"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="lx2-el-GCF"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="250" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="cloud.fill" catalog="system"/>
+                                            <state key="normal" image="cloud.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="yym-d3-lKP"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GcX-rA-hri" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="442.66666666666663" width="75" height="97.333333333333371"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="Lao-HY-2n7"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="375" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="snowflake" catalog="system"/>
+                                            <state key="normal" image="snowflake" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="7Pc-gX-K9P"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="6hl-8h-D9Z" firstAttribute="top" secondItem="EXz-le-Nda" secondAttribute="top" id="2xE-pd-drN"/>
+                                        <constraint firstAttribute="trailing" secondItem="6hl-8h-D9Z" secondAttribute="trailing" id="4uk-GI-iNm"/>
+                                        <constraint firstItem="6hl-8h-D9Z" firstAttribute="leading" secondItem="EXz-le-Nda" secondAttribute="leading" id="Hxk-hR-lFm"/>
+                                        <constraint firstAttribute="bottom" secondItem="GcX-rA-hri" secondAttribute="bottom" id="LUd-99-yLN"/>
                                         <constraint firstAttribute="width" constant="75" id="OJt-V5-YRP"/>
+                                        <constraint firstItem="gbW-b9-cB4" firstAttribute="leading" secondItem="EXz-le-Nda" secondAttribute="leading" id="TwG-dP-tYk"/>
+                                        <constraint firstItem="wIm-5z-jNH" firstAttribute="leading" secondItem="EXz-le-Nda" secondAttribute="leading" id="WXV-Qf-Gz5"/>
+                                        <constraint firstAttribute="trailing" secondItem="GcX-rA-hri" secondAttribute="trailing" id="a9Z-y9-ebz"/>
+                                        <constraint firstAttribute="trailing" secondItem="gbW-b9-cB4" secondAttribute="trailing" id="tbY-Du-XV4"/>
+                                        <constraint firstItem="GcX-rA-hri" firstAttribute="leading" secondItem="EXz-le-Nda" secondAttribute="leading" id="yIP-OT-ZKG"/>
+                                        <constraint firstAttribute="trailing" secondItem="wIm-5z-jNH" secondAttribute="trailing" id="yzW-0U-pxP"/>
                                     </constraints>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-FT-7Hi">
-                                    <rect key="frame" x="210" y="0.0" width="75" height="540"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="z1I-FT-7Hi">
+                                    <rect key="frame" x="210.00000000000003" y="0.0" width="74.999999999999972" height="450"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-xQ-04V" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="8Zb-W4-Npd"/>
-                                            </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="umbrella.fill" catalog="system"/>
+                                            <state key="normal" image="umbrella.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="FNM-w2-YQJ"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt1-9n-fEH" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="155" width="75" height="75"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="sI1-Iy-6JO"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="125" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="flame.fill" catalog="system"/>
+                                            <state key="normal" image="flame.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="aWS-df-J9g"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-ho-enC" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="310" width="75" height="75"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="75" id="jXi-HZ-sFx"/>
-                                            </constraints>
+                                            <rect key="frame" x="0.0" y="250" width="75" height="75"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="suit.club.fill" catalog="system"/>
+                                            <state key="normal" image="suit.club.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="FxX-rC-egK"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9c9-hU-jZK" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="465" width="75" height="75"/>
+                                            <rect key="frame" x="0.0" y="375" width="75" height="75"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Bqq-pW-FNX"/>
-                                                <constraint firstAttribute="width" constant="75" id="hbB-Vq-Q6v"/>
-                                                <constraint firstAttribute="height" priority="750" constant="75" id="igh-64-ZRV"/>
+                                                <constraint firstAttribute="height" priority="750" constant="75" id="1v6-v1-r58"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6Z2-QH-jYp"/>
                                             </constraints>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                                            <state key="normal" image="suit.spade.fill" catalog="system"/>
+                                            <state key="normal" image="suit.spade.fill" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="heavy"/>
+                                            </state>
                                             <connections>
                                                 <action selector="toggleButton:" destination="-1" eventType="primaryActionTriggered" id="uZi-K2-Wxm"/>
                                             </connections>
                                         </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Mt1-9n-fEH" secondAttribute="trailing" id="2G2-Tf-hWe"/>
+                                        <constraint firstAttribute="trailing" secondItem="7VT-xQ-04V" secondAttribute="trailing" id="CjS-eh-KSr"/>
+                                        <constraint firstItem="Mt1-9n-fEH" firstAttribute="leading" secondItem="z1I-FT-7Hi" secondAttribute="leading" id="In7-TQ-hBy"/>
+                                        <constraint firstItem="7VT-xQ-04V" firstAttribute="top" secondItem="z1I-FT-7Hi" secondAttribute="top" id="RJr-eB-IUU"/>
+                                        <constraint firstItem="7VT-xQ-04V" firstAttribute="leading" secondItem="z1I-FT-7Hi" secondAttribute="leading" id="bU5-GA-Wag"/>
+                                        <constraint firstAttribute="trailing" secondItem="e4G-ho-enC" secondAttribute="trailing" id="cOb-3R-Arc"/>
+                                        <constraint firstAttribute="trailing" secondItem="9c9-hU-jZK" secondAttribute="trailing" id="cdT-cE-nMP"/>
+                                        <constraint firstItem="9c9-hU-jZK" firstAttribute="leading" secondItem="z1I-FT-7Hi" secondAttribute="leading" id="dwu-92-D75"/>
+                                        <constraint firstItem="e4G-ho-enC" firstAttribute="leading" secondItem="z1I-FT-7Hi" secondAttribute="leading" id="dzg-BM-zrx"/>
                                         <constraint firstAttribute="width" constant="75" id="hV4-6d-AGp"/>
+                                        <constraint firstAttribute="bottom" secondItem="9c9-hU-jZK" secondAttribute="bottom" id="jgZ-Zs-fnj"/>
                                     </constraints>
                                 </stackView>
                             </subviews>
@@ -228,11 +248,10 @@
                         <constraint firstItem="Nxv-IQ-bHG" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RwX-hO-4HT" secondAttribute="top" id="22o-Ik-mE5"/>
                         <constraint firstItem="Nxv-IQ-bHG" firstAttribute="centerX" secondItem="RwX-hO-4HT" secondAttribute="centerX" id="2mB-0S-Hdb"/>
                         <constraint firstItem="ft0-Z7-vMx" firstAttribute="centerX" secondItem="RwX-hO-4HT" secondAttribute="centerX" id="4dm-by-2Gm"/>
-                        <constraint firstItem="Nxv-IQ-bHG" firstAttribute="top" secondItem="RwX-hO-4HT" secondAttribute="top" priority="250" constant="50" id="ARN-bM-nwL"/>
-                        <constraint firstItem="ft0-Z7-vMx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nxv-IQ-bHG" secondAttribute="bottom" id="AhO-yo-QLj"/>
-                        <constraint firstItem="ft0-Z7-vMx" firstAttribute="top" secondItem="Nxv-IQ-bHG" secondAttribute="bottom" priority="750" constant="50" id="Qlq-ZJ-xyH"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ft0-Z7-vMx" secondAttribute="bottom" id="nn3-Qa-Bg2"/>
-                        <constraint firstAttribute="bottom" secondItem="ft0-Z7-vMx" secondAttribute="bottom" priority="750" constant="78" id="tfc-fj-fEg"/>
+                        <constraint firstItem="Nxv-IQ-bHG" firstAttribute="top" secondItem="RwX-hO-4HT" secondAttribute="top" priority="750" constant="125" id="ARN-bM-nwL"/>
+                        <constraint firstItem="ft0-Z7-vMx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Nxv-IQ-bHG" secondAttribute="bottom" constant="10" id="AhO-yo-QLj"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ft0-Z7-vMx" secondAttribute="bottom" constant="10" id="nn3-Qa-Bg2"/>
+                        <constraint firstAttribute="bottom" secondItem="ft0-Z7-vMx" secondAttribute="bottom" priority="250" constant="200" id="tfc-fj-fEg"/>
                     </constraints>
                 </view>
             </subviews>

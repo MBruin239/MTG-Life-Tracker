@@ -80,7 +80,7 @@ class CountersSelectorView: CustomView {
         
         doneButton.cornerRadius = 10.0
         
-       // doneButton.titleLabel?.text = "Cancel"
+        doneButton.setTitle("Cancel", for: .normal)
     }
     
     @IBAction func toggleButton(_ sender: CustomButton) {
@@ -88,7 +88,7 @@ class CountersSelectorView: CustomView {
             sender.isSelected = true
             sender.backgroundColor = .lightGray
             counterTypeArray.append((sender.counterType, sender.imageView?.image))
-          //  doneButton.titleLabel?.text = "Done"
+            doneButton.setTitle("Done", for: .normal)
         } else {
             sender.isSelected = false;
             sender.backgroundColor = .clear
@@ -99,7 +99,7 @@ class CountersSelectorView: CustomView {
             }
         }
         if counterTypeArray.count == 0 {
-          //  doneButton.titleLabel?.text = "Cancel"
+            doneButton.setTitle("Cancel", for: .normal)
         }
     }
     

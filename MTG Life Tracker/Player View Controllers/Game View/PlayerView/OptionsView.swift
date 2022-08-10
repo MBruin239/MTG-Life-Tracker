@@ -43,6 +43,15 @@ class OptionsView: CustomView {
         self.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    func resetOptions() {
+        resetCounters()
+    }
+    
+    func resetCounters() {
+        countersView = CountersSelectorView()
+        countersView.delegate = self
+    }
+    
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
         delegate?.closeOptionsView()
     }
