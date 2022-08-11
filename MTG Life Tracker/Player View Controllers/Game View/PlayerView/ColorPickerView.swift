@@ -34,9 +34,12 @@ class ColorPickerView: CustomView {
     func setTheColor(color: UIColor){
         theColor = color
         
-        redSlider.value = Float(theColor.rgba.red)
-        greenSlider.value = Float(theColor.rgba.green)
-        blueSlider.value = Float(theColor.rgba.blue)
+        redSlider.value = Float(color.rgba.red)
+        redValue = Double(color.rgba.red)
+        greenSlider.value = Float(color.rgba.green)
+        greenValue = Double(color.rgba.green)
+        blueSlider.value = Float(color.rgba.blue)
+        blueValue = Double(color.rgba.blue)
     }
 
     override func commonInit() {
