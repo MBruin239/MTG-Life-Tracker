@@ -25,6 +25,9 @@ class TwoPlayersView: PlayersView {
         playerView1.playerLifeView.lifeTotal = startingLifeTotal
         playerView2.playerLifeView.lifeTotal = startingLifeTotal
         
+        playerView1.playerID = 1
+        playerView2.playerID = 2
+        
         playerView1.delegate = self
         playerView2.delegate = self
         

@@ -11,8 +11,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerView" customModule="MTG_Life_Tracker" customModuleProvider="target">
             <connections>
                 <outlet property="behindColorView" destination="6TR-CI-bmb" id="3ei-i7-4JQ"/>
+                <outlet property="citysBlessing" destination="hqI-lr-PGa" id="miW-V0-JPp"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="ncU-Hl-7Iw"/>
+                <outlet property="dead" destination="mTm-g7-wMP" id="JlU-we-xqK"/>
+                <outlet property="delve" destination="ax2-TJ-45A" id="Xth-X3-w4s"/>
                 <outlet property="mainStack" destination="UDS-hV-3LQ" id="rp3-7L-nM9"/>
+                <outlet property="monarch" destination="p7d-Ak-R7a" id="igI-UF-rEg"/>
                 <outlet property="optionsView" destination="sKE-qX-sGJ" id="kG2-qI-w18"/>
                 <outlet property="pannableView" destination="0kj-6J-Gqh" id="uhQ-tt-hS0"/>
                 <outlet property="playerLifeView" destination="bwY-ds-HSD" id="Hra-p2-yUU"/>
@@ -73,18 +77,47 @@
                             <viewLayoutGuide key="contentLayoutGuide" id="BC9-G5-d8v"/>
                             <viewLayoutGuide key="frameLayoutGuide" id="L2k-nO-Wz5"/>
                         </scrollView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEAD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="mTm-g7-wMP">
+                            <rect key="frame" x="10" y="10" width="418" height="280"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="200"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3b6-9C-xF1">
+                            <rect key="frame" x="10" y="10" width="0.0" height="0.0"/>
+                            <subviews>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p7d-Ak-R7a">
+                                    <rect key="frame" x="0.0" y="-5" width="0.0" height="43.5"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
+                                </imageView>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bag.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ax2-TJ-45A">
+                                    <rect key="frame" x="0.0" y="-6.5" width="0.0" height="45.5"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
+                                </imageView>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.bubble.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hqI-lr-PGa">
+                                    <rect key="frame" x="0.0" y="1.5" width="0.0" height="34.5"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="mTm-g7-wMP" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" constant="10" id="0BT-oS-JSc"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="centerY" secondItem="0kj-6J-Gqh" secondAttribute="centerY" id="0V7-Zu-UFP"/>
                         <constraint firstAttribute="trailing" secondItem="6TR-CI-bmb" secondAttribute="trailing" id="6NJ-QT-c6S"/>
                         <constraint firstAttribute="bottom" secondItem="VzQ-Xj-DGU" secondAttribute="bottom" id="8b0-Cb-UzZ"/>
+                        <constraint firstItem="3b6-9C-xF1" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" constant="10" id="T9Y-kG-C2z"/>
                         <constraint firstAttribute="trailing" secondItem="VzQ-Xj-DGU" secondAttribute="trailing" id="W3H-D3-Q9i"/>
+                        <constraint firstItem="3b6-9C-xF1" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" constant="10" id="Zab-AI-EVa"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="centerX" secondItem="0kj-6J-Gqh" secondAttribute="centerX" id="aqw-Vt-iqj"/>
+                        <constraint firstAttribute="trailing" secondItem="mTm-g7-wMP" secondAttribute="trailing" constant="10" id="fAq-gb-GqK"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" id="hFt-6o-zxZ"/>
                         <constraint firstItem="VzQ-Xj-DGU" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" id="iVQ-e7-th9"/>
+                        <constraint firstAttribute="bottom" secondItem="mTm-g7-wMP" secondAttribute="bottom" constant="10" id="mQZ-7D-BKo"/>
                         <constraint firstItem="6TR-CI-bmb" firstAttribute="leading" secondItem="0kj-6J-Gqh" secondAttribute="leading" id="uFR-Zc-fzI"/>
                         <constraint firstAttribute="bottom" secondItem="6TR-CI-bmb" secondAttribute="bottom" id="wMu-pB-zAk"/>
+                        <constraint firstItem="mTm-g7-wMP" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" constant="10" id="ymT-vo-cS5"/>
                         <constraint firstItem="VzQ-Xj-DGU" firstAttribute="top" secondItem="0kj-6J-Gqh" secondAttribute="top" id="zp5-Qn-cRf"/>
                     </constraints>
                 </view>
@@ -108,6 +141,9 @@
         </view>
     </objects>
     <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="crown.fill" catalog="system" width="128" height="92"/>
+        <image name="star.bubble.fill" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

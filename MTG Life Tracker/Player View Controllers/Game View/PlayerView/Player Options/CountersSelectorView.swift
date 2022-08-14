@@ -85,13 +85,11 @@ class CountersSelectorView: CustomView {
     
     @IBAction func toggleButton(_ sender: CustomButton) {
         if sender.isSelected == false {
-            sender.isSelected = true
-            sender.backgroundColor = .lightGray
+            sender.select()
             counterTypeArray.append((sender.counterType, sender.imageView?.image))
             doneButton.setTitle("Done", for: .normal)
         } else {
-            sender.isSelected = false;
-            sender.backgroundColor = .clear
+            sender.deselect()
             for i in stride(from: counterTypeArray.count-1, through: 0, by: -1) {
                 if counterTypeArray[i].0 == sender.counterType {
                     counterTypeArray.remove(at: i)

@@ -9,16 +9,23 @@ import UIKit
 
 protocol PlayerViewDelegate {
     func openCounterSelectorView(counterSelectorView: CountersSelectorView)
+    func openEffectsView(effectsView: EffectsView)
     func openFontPickerView(fontPickerView: UIFontPickerViewController)
 }
 
-class PlayerView: CustomView {
+class PlayerView: CustomView, Identifiable {
+    var playerID: Int = -1 { didSet { optionsView.playerID = playerID } }
     let kCONTENT_XIB_NAME = "PlayerView"
     
     var delegate: PlayerViewDelegate?
 
     @IBOutlet var playerLifeView: LifeTrackerView!
     
+    @IBOutlet var monarch: UIImageView!
+    @IBOutlet var delve: UIImageView!
+    @IBOutlet var citysBlessing: UIImageView!
+    @IBOutlet var dead: UILabel!
+
     var fontPicker = UIFontPickerViewController()
     var fontDescriptor: UIFontDescriptor?
     var textColor: UIColor = .black
@@ -60,11 +67,42 @@ class PlayerView: CustomView {
         
         let widthConstraint = NSLayoutConstraint(item: playerLifeView!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 150)
         playerLifeView.addConstraints([widthConstraint])
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(newMonarchNotification(notification:)), name: Notification.Name("NewMonarchNotification"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(newDelverNotification(notification:)), name: Notification.Name("NewDelverNotification"), object: nil)
+    }
+    
+    @objc func newMonarchNotification(notification: Notification) {
+        if let id = notification.userInfo?["playerID"] as? Int {
+            if id == playerID {
+                monarch.isHidden = false
+            } else {
+                monarch.isHidden = true
+                optionsView.effectsView.monarchButton.deselect()
+            }
+        }
+    }
+    
+    @objc func newDelverNotification(notification: Notification) {
+        if let id = notification.userInfo?["playerID"] as? Int {
+            if id == playerID {
+                delve.isHidden = false
+            } else {
+                delve.isHidden = true
+                optionsView.effectsView.delveButton.deselect()
+            }
+        }
     }
     
     func setTextColor(color: UIColor) {
         textColor = color
         playerLifeView.setTextColor(color: color)
+        
+        monarch.tintColor = color
+        citysBlessing.tintColor = color
+        delve.tintColor = color
+        dead.textColor = color
         
         for view in countersStack.subviews {
             if let counterView = view as? LifeTrackerView {
@@ -133,6 +171,16 @@ class PlayerView: CustomView {
 }
 
 extension PlayerView: OptionsViewDelegate {
+    
+    func showCitysBlessing(_ show: Bool) {
+        citysBlessing.isHidden = !show
+    }
+    
+    func showDead(_ show: Bool) {
+        dead.isHidden = !show
+        playerLifeView.isHidden = show
+    }
+    
     func openFontPickerViewController() {
         let configuration = UIFontPickerViewController.Configuration()
         configuration.includeFaces = true
@@ -186,6 +234,10 @@ extension PlayerView: OptionsViewDelegate {
     
     func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
         delegate?.openCounterSelectorView(counterSelectorView: counterSelectorView)
+    }
+    
+    func openEffectsView(effectsView: EffectsView) {
+        delegate?.openEffectsView(effectsView: effectsView)
     }
 }
 

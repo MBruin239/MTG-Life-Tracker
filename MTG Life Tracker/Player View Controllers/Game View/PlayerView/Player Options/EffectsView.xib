@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EffectsView">
+            <connections>
+                <outlet property="citysBlessingButton" destination="Uyh-0i-7Bg" id="gM3-p3-igv"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Jah-gb-RSh"/>
+                <outlet property="deadButton" destination="z0a-PH-7Vs" id="XTF-MP-ofk"/>
+                <outlet property="delveButton" destination="MSS-Qe-TqG" id="1DI-FU-Zjj"/>
+                <outlet property="doneButton" destination="Uid-vr-WVv" id="nmG-vI-ZpT"/>
+                <outlet property="monarchButton" destination="ySe-nn-oA1" id="Rqi-uQ-mMP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Lhc-Ow-MqO">
+                    <rect key="frame" x="40.666666666666657" y="94" width="309" height="366"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fda-MZ-FgN">
+                            <rect key="frame" x="0.0" y="0.0" width="147" height="366"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySe-nn-oA1" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="147" height="175.66666666666666"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Monarch" image="crown.fill" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="monarchButtonPress:" destination="-1" eventType="primaryActionTriggered" id="U1C-r3-Adr"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyh-0i-7Bg" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="190.66666666666669" width="147" height="175.33333333333331"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="City's Blessing" image="star.bubble.fill" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="citysBlessingButtonPress:" destination="-1" eventType="primaryActionTriggered" id="QV6-4c-TQH"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="SlJ-5R-Wak">
+                            <rect key="frame" x="162" y="0.0" width="147" height="366"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSS-Qe-TqG" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="147" height="175.66666666666666"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Delve" image="bag.fill" catalog="system">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="delveButtonPress:" destination="-1" eventType="primaryActionTriggered" id="poQ-SP-ien"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0a-PH-7Vs" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="190.66666666666669" width="147" height="175.33333333333331"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                                    <state key="normal" title="Dead" image="bonjour" catalog="system">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="semibold"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="deadButtonPress:" destination="-1" eventType="primaryActionTriggered" id="bFc-6N-C7o"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uid-vr-WVv" customClass="CustomButton" customModule="MTG_Life_Tracker" customModuleProvider="target">
+                    <rect key="frame" x="120" y="560" width="150" height="50"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="Lcu-c7-x43"/>
+                        <constraint firstAttribute="height" constant="50" id="XAR-W3-3HM"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="gray" title="Done"/>
+                    <connections>
+                        <action selector="doneButtonPress" destination="-1" eventType="primaryActionTriggered" id="on7-Ke-Z8S"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Lhc-Ow-MqO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="50" id="9x4-ik-8an"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lhc-Ow-MqO" secondAttribute="trailing" constant="5" id="CrW-fS-kcS"/>
+                <constraint firstItem="Lhc-Ow-MqO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="IXQ-5Q-ZqQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Uid-vr-WVv" secondAttribute="bottom" constant="10" id="R1V-ik-HDv"/>
+                <constraint firstItem="Uid-vr-WVv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TJo-od-jQ6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Lhc-Ow-MqO" secondAttribute="trailing" constant="50" id="XxF-TO-e6Y"/>
+                <constraint firstItem="Uid-vr-WVv" firstAttribute="top" secondItem="Lhc-Ow-MqO" secondAttribute="bottom" priority="750" constant="100" id="dn2-LU-M75"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Uid-vr-WVv" secondAttribute="bottom" priority="750" constant="200" id="jd0-AE-syG"/>
+                <constraint firstItem="Lhc-Ow-MqO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" id="kjg-pb-1X6"/>
+                <constraint firstItem="Uid-vr-WVv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Lhc-Ow-MqO" secondAttribute="bottom" constant="10" id="qgR-O5-sVq"/>
+                <constraint firstItem="Lhc-Ow-MqO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="s3V-ov-eLA"/>
+                <constraint firstItem="Lhc-Ow-MqO" firstAttribute="top" relation="lessThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="50" id="yrc-up-feD"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="150.72463768115944" y="-89.0625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bag.fill" catalog="system" width="128" height="128"/>
+        <image name="bonjour" catalog="system" width="128" height="110"/>
+        <image name="crown.fill" catalog="system" width="128" height="92"/>
+        <image name="star.bubble.fill" catalog="system" width="128" height="110"/>
+    </resources>
+</document>

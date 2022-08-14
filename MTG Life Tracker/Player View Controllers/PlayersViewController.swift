@@ -64,6 +64,11 @@ class PlayersViewController: UIViewController {
 }
 
 extension PlayersViewController: PlayersViewDelegate {
+    func openEffectsView(effectsView: EffectsView) {
+        effectsView.frame = self.view.frame
+        self.view.addSubview(effectsView)
+    }
+    
     func openFontPickerView(fontPickerView: UIFontPickerViewController) {
         present(fontPickerView, animated: true)
     }

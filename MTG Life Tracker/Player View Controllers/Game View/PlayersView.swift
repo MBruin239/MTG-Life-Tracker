@@ -10,6 +10,7 @@ import UIKit
 protocol PlayersViewDelegate {
     func menuButtonPress()
     func openCounterSelectorView(counterSelectorView: CountersSelectorView)
+    func openEffectsView(effectsView: EffectsView)
     func openFontPickerView(fontPickerView: UIFontPickerViewController)
 }
 
@@ -50,6 +51,10 @@ class PlayersView: CustomView {
 }
 
 extension PlayersView: PlayerViewDelegate {
+    func openEffectsView(effectsView: EffectsView) {
+        delegate?.openEffectsView(effectsView: effectsView)
+    }
+    
     func openFontPickerView(fontPickerView: UIFontPickerViewController) {
         delegate?.openFontPickerView(fontPickerView: fontPickerView)
     }

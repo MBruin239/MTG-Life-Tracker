@@ -23,6 +23,16 @@ class CustomButton: UIButton {
         self.contentVerticalAlignment = .fill
         self.cornerRadius = 10.0
     }
+    
+    func select() {
+        self.isSelected = true
+        self.backgroundColor = .lightGray
+    }
+    
+    func deselect() {
+        self.isSelected = false;
+        self.backgroundColor = .clear
+    }
 }
 
 extension CustomButton {

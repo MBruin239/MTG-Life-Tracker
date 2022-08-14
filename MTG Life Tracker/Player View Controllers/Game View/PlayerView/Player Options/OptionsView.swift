@@ -9,13 +9,17 @@ import UIKit
 
 protocol OptionsViewDelegate {
     func openCounterSelectorView(counterSelectorView: CountersSelectorView)
+    func openEffectsView(effectsView: EffectsView)
     func openFontPickerViewController()
     func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)])
     func setBackgroundColor(color: UIColor)
     func closeOptionsView()
+    func showCitysBlessing(_ show: Bool)
+    func showDead(_ show: Bool)
 }
 
 class OptionsView: CustomView {
+    var playerID: Int = -1 { didSet { effectsView.playerID = playerID } }
     let kCONTENT_XIB_NAME = "OptionsView"
     
     var delegate: OptionsViewDelegate?
@@ -23,6 +27,8 @@ class OptionsView: CustomView {
     var countersView: CountersSelectorView = CountersSelectorView()
     var colorView: ColorPickerView = ColorPickerView()
     var theColor: UIColor = .white
+    
+    var effectsView: EffectsView = EffectsView()
 
     @IBOutlet var countersButton: CustomButton!
     @IBOutlet var effectsButton: CustomButton!
@@ -41,6 +47,7 @@ class OptionsView: CustomView {
         
         countersView.delegate = self
         colorView.delegate = self
+        effectsView.delegate = self
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
         self.addGestureRecognizer(tapGestureRecognizer)
@@ -48,11 +55,16 @@ class OptionsView: CustomView {
     
     func resetOptions() {
         resetCounters()
+        resetEffects()
     }
     
     func resetCounters() {
         countersView = CountersSelectorView()
         countersView.delegate = self
+    }
+    
+    func resetEffects() {
+        effectsView.resetEffects()
     }
     
     @objc private func didTap(_ sender: UITapGestureRecognizer) {
@@ -68,7 +80,7 @@ class OptionsView: CustomView {
     }
     
     @IBAction func effectsButtonPress() {
-
+        delegate?.openEffectsView(effectsView: effectsView)
     }
     
     @IBAction func colorButtonPress() {
@@ -92,5 +104,19 @@ extension OptionsView: ColorPickerViewDelegate{
     func setBackgroundColor(color: UIColor) {
         theColor = color
         delegate?.setBackgroundColor(color: color)
+    }
+}
+
+extension OptionsView: EffectsViewDelegate {
+    func EffectsViewWillClose() {
+        delegate?.closeOptionsView()
+    }
+    
+    func showCitysBlessing(_ show: Bool) {
+        delegate?.showCitysBlessing(show)
+    }
+    
+    func showDead(_ show: Bool) {
+        delegate?.showDead(show)
     }
 }
