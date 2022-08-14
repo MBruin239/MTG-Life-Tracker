@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="f1L-Pp-kIg">
-                    <rect key="frame" x="20" y="55" width="414" height="95"/>
+                    <rect key="frame" x="20" y="55" width="409" height="95"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Uuj-By-0n6">
                             <rect key="frame" x="0.0" y="0.0" width="25" height="95"/>
@@ -47,26 +47,26 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CVf-y3-kHG">
-                            <rect key="frame" x="74" y="0.0" width="340" height="95"/>
+                            <rect key="frame" x="74" y="0.0" width="335" height="95"/>
                             <subviews>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bor-qk-roV">
-                                    <rect key="frame" x="-2" y="0.0" width="344" height="24.5"/>
+                                    <rect key="frame" x="-2" y="0.0" width="339" height="24.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" priority="750" constant="350" id="Z4F-DI-9vs"/>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="wxk-5q-8ME"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="wxk-5q-8ME"/>
                                     </constraints>
                                     <connections>
                                         <action selector="redSliderValueChanged:" destination="-1" eventType="primaryActionTriggered" id="gL6-qa-5lv"/>
                                     </connections>
                                 </slider>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="peq-Jp-EAx">
-                                    <rect key="frame" x="-2" y="35.5" width="344" height="25"/>
+                                    <rect key="frame" x="-2" y="35.5" width="339" height="25"/>
                                     <connections>
                                         <action selector="greenSliderValueChanged:" destination="-1" eventType="primaryActionTriggered" id="y3m-6z-Qj2"/>
                                     </connections>
                                 </slider>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="iy0-Zc-1Zr">
-                                    <rect key="frame" x="-2" y="71.5" width="344" height="24.5"/>
+                                    <rect key="frame" x="-2" y="71.5" width="339" height="24.5"/>
                                     <connections>
                                         <action selector="blueSliderValueChanged:" destination="-1" eventType="primaryActionTriggered" id="E18-Qq-Puq"/>
                                     </connections>
@@ -98,7 +98,7 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="f1L-Pp-kIg" secondAttribute="bottom" id="BSa-lr-N2w"/>
                 <constraint firstItem="1oq-qJ-DB3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="BwG-6Q-OzS"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f1L-Pp-kIg" secondAttribute="trailing" constant="30" id="F2e-uq-uqn"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f1L-Pp-kIg" secondAttribute="trailing" constant="35" id="F2e-uq-uqn"/>
                 <constraint firstItem="f1L-Pp-kIg" firstAttribute="top" secondItem="1oq-qJ-DB3" secondAttribute="bottom" id="XXF-Sc-9eY"/>
                 <constraint firstAttribute="trailing" secondItem="1oq-qJ-DB3" secondAttribute="trailing" constant="20" id="c8C-fG-5GA"/>
                 <constraint firstItem="f1L-Pp-kIg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dTS-6l-c3E"/>

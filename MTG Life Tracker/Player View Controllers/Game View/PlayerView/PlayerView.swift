@@ -9,6 +9,7 @@ import UIKit
 
 protocol PlayerViewDelegate {
     func openCounterSelectorView(counterSelectorView: CountersSelectorView)
+    func openFontPickerView(fontPickerView: UIFontPickerViewController)
 }
 
 class PlayerView: CustomView {
@@ -17,6 +18,10 @@ class PlayerView: CustomView {
     var delegate: PlayerViewDelegate?
 
     @IBOutlet var playerLifeView: LifeTrackerView!
+    
+    var fontPicker = UIFontPickerViewController()
+    var fontDescriptor: UIFontDescriptor?
+    var textColor: UIColor = .black
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var mainStack: UIStackView!
@@ -50,11 +55,22 @@ class PlayerView: CustomView {
         pannableView.addGestureRecognizer(panGestureRecognizer)
         
         let theColor = UIColor.random()
-        playerLifeView.contentView.backgroundColor = theColor
+        setBackgroundColor(color: theColor)
         optionsView.theColor = theColor
         
         let widthConstraint = NSLayoutConstraint(item: playerLifeView!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 150)
         playerLifeView.addConstraints([widthConstraint])
+    }
+    
+    func setTextColor(color: UIColor) {
+        textColor = color
+        playerLifeView.setTextColor(color: color)
+        
+        for view in countersStack.subviews {
+            if let counterView = view as? LifeTrackerView {
+                counterView.setTextColor(color: color)
+            }
+        }
     }
     
     func resetGame(with startingLifeTotal: Int){
@@ -84,6 +100,9 @@ class PlayerView: CustomView {
         }
         // Make sure the top button is re-enabled when back to normal positioning
         playerLifeView.topButton.isEnabled = true
+        
+        //
+        optionsView.colorView.removeFromSuperview()
     }
     
     @objc private func didPan(_ sender: UIPanGestureRecognizer) {
@@ -114,12 +133,37 @@ class PlayerView: CustomView {
 }
 
 extension PlayerView: OptionsViewDelegate {
+    func openFontPickerViewController() {
+        let configuration = UIFontPickerViewController.Configuration()
+        configuration.includeFaces = true
+        configuration.filteredTraits = [.classSymbolic]
+        fontPicker = UIFontPickerViewController(configuration: configuration)
+        fontPicker.delegate = self
+        
+        delegate?.openFontPickerView(fontPickerView: fontPicker)
+    }
+    
     func closeOptionsView() {
         slidePanableViewToTop()
     }
     
     func setBackgroundColor(color: UIColor) {
         playerLifeView.contentView.backgroundColor = color
+        
+        for view in countersStack.subviews {
+            if let counterView = view as? LifeTrackerView {
+                counterView.contentView.backgroundColor = color
+            }
+        }
+        
+        switch color.brightness {
+        case .dark:
+            setTextColor(color: .white)
+            break
+        default:
+            setTextColor(color: .black)
+        }
+        
     }
 
     func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)]) {
@@ -142,6 +186,23 @@ extension PlayerView: OptionsViewDelegate {
     
     func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
         delegate?.openCounterSelectorView(counterSelectorView: counterSelectorView)
+    }
+}
+
+extension PlayerView: UIFontPickerViewControllerDelegate {
+    
+    func fontPickerViewControllerDidPickFont(_ viewController: UIFontPickerViewController) {
+        guard let descriptor = viewController.selectedFontDescriptor else { return }
+        fontDescriptor = descriptor
+        playerLifeView.setFont(with: descriptor)
+        
+        for view in countersStack.subviews {
+            if let counterView = view as? LifeTrackerView {
+                counterView.setFont(with: descriptor)
+            }
+        }
+        fontPicker.dismiss(animated: true)
+        closeOptionsView()
     }
 }
 
@@ -172,6 +233,12 @@ extension PlayerView {
         counterView.lifeTotal = 0
         counterView.counterType = counterType
         counterView.bottomImage.image = image
+        
+        if let descriptor = fontDescriptor {
+            counterView.setFont(with: descriptor)
+        }
+        
+        counterView.setTextColor(color: textColor)
         
         let widthConstraint = NSLayoutConstraint(item: counterView, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.greaterThanOrEqual, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 100)
         counterView.addConstraints([widthConstraint])

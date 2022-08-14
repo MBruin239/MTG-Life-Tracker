@@ -31,6 +31,14 @@ class PlayersViewController: UIViewController {
         UIApplication.shared.isIdleTimerDisabled = false
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return true
+    }
+    
     func setup() {
         UIApplication.shared.isIdleTimerDisabled = true
         switch numberOfPlayers {
@@ -56,6 +64,9 @@ class PlayersViewController: UIViewController {
 }
 
 extension PlayersViewController: PlayersViewDelegate {
+    func openFontPickerView(fontPickerView: UIFontPickerViewController) {
+        present(fontPickerView, animated: true)
+    }
     
     func openCounterSelectorView(counterSelectorView: CountersSelectorView) {
         counterSelectorView.frame = self.view.frame

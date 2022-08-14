@@ -56,6 +56,7 @@
 		71976EBA2896D89800FAEA93 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EB92896D89800FAEA93 /* DiceView.swift */; };
 		71976EBC2896DA2E00FAEA93 /* DiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EBB2896DA2E00FAEA93 /* DiceButton.swift */; };
 		71976EBE2897011F00FAEA93 /* GameOptionViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71976EBD2897011F00FAEA93 /* GameOptionViewProvider.swift */; };
+		71A5551128A95DA800EFF996 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A5551028A95DA800EFF996 /* CustomLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		71976EB92896D89800FAEA93 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		71976EBB2896DA2E00FAEA93 /* DiceButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceButton.swift; sourceTree = "<group>"; };
 		71976EBD2897011F00FAEA93 /* GameOptionViewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOptionViewProvider.swift; sourceTree = "<group>"; };
+		71A5551028A95DA800EFF996 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				71655399288EC18C00FB64FB /* CustomView.swift */,
 				716553B9288F785600FB64FB /* CircleView.swift */,
 				71976EB028922E9700FAEA93 /* CustomButton.swift */,
+				71A5551028A95DA800EFF996 /* CustomLabel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				7165539C288ECE3F00FB64FB /* TwoPlayersView.swift in Sources */,
 				71976EBA2896D89800FAEA93 /* DiceView.swift in Sources */,
 				7165538D288E002F00FB64FB /* MainCoordinator.swift in Sources */,
+				71A5551128A95DA800EFF996 /* CustomLabel.swift in Sources */,
 				7165537D288DF80B00FB64FB /* OptionsViewController.swift in Sources */,
 				7165539A288EC18C00FB64FB /* CustomView.swift in Sources */,
 				716553B6288F6FF800FB64FB /* PlayerSelectorView.swift in Sources */,

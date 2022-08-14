@@ -9,6 +9,7 @@ import UIKit
 
 protocol OptionsViewDelegate {
     func openCounterSelectorView(counterSelectorView: CountersSelectorView)
+    func openFontPickerViewController()
     func showCountersOfTypes(counterTypeArray: [(CounterType, UIImage?)])
     func setBackgroundColor(color: UIColor)
     func closeOptionsView()
@@ -26,6 +27,7 @@ class OptionsView: CustomView {
     @IBOutlet var countersButton: CustomButton!
     @IBOutlet var effectsButton: CustomButton!
     @IBOutlet var colorsButton: CustomButton!
+    @IBOutlet var fontButton: CustomButton!
 
     override func commonInit() {
         super.commonInit()
@@ -35,6 +37,7 @@ class OptionsView: CustomView {
         countersButton.centerVertically()
         effectsButton.centerVertically()
         colorsButton.centerVertically()
+        fontButton.centerVertically()
         
         countersView.delegate = self
         colorView.delegate = self
@@ -58,6 +61,14 @@ class OptionsView: CustomView {
     
     @IBAction func countersButtonPress() {
         delegate?.openCounterSelectorView(counterSelectorView: countersView)
+    }
+    
+    @IBAction func fontButtonPress() {
+        delegate?.openFontPickerViewController()
+    }
+    
+    @IBAction func effectsButtonPress() {
+
     }
     
     @IBAction func colorButtonPress() {

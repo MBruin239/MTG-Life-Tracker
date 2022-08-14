@@ -94,11 +94,9 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="sKE-qX-sGJ" secondAttribute="bottom" id="802-Ae-kVl"/>
                 <constraint firstAttribute="trailing" secondItem="sKE-qX-sGJ" secondAttribute="trailing" id="CH7-Um-xci"/>
-                <constraint firstItem="sKE-qX-sGJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UXl-yE-GNk"/>
                 <constraint firstAttribute="trailing" secondItem="0kj-6J-Gqh" secondAttribute="trailing" id="WKE-MS-nuU"/>
                 <constraint firstItem="0kj-6J-Gqh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xb5-tV-cLf"/>
                 <constraint firstItem="0kj-6J-Gqh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="flW-fG-20m"/>
-                <constraint firstItem="sKE-qX-sGJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="g41-qD-oyn"/>
                 <constraint firstAttribute="bottom" secondItem="0kj-6J-Gqh" secondAttribute="bottom" id="m6Z-ZD-QGj"/>
                 <constraint firstItem="0kj-6J-Gqh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sR8-ME-oca"/>
                 <constraint firstItem="0kj-6J-Gqh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sg5-u9-UuR"/>

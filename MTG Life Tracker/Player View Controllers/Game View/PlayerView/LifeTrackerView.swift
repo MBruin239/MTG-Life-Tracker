@@ -11,7 +11,7 @@ import Foundation
 class LifeTrackerView: CustomView {
     let kCONTENT_XIB_NAME = "LifeTrackerView"
 
-    @IBOutlet weak var lifeTotalLabel: UILabel!
+    @IBOutlet weak var lifeTotalLabel: CustomLabel!
     
     @IBOutlet var topButton: UIButton!
     @IBOutlet var bottomButton: UIButton!
@@ -31,9 +31,8 @@ class LifeTrackerView: CustomView {
         Bundle.main.loadNibNamed(kCONTENT_XIB_NAME, owner: self, options: nil)
         contentView.fixInView(self)
         
-        topButton.alpha = 0.1
-        bottomButton.alpha = 0.1
-        
+        lifeTotalLabel.adjustsFontForContentSizeCategory = true
+                
         let longPressTop = UILongPressGestureRecognizer(target: self, action: #selector(longPress(sender:)))
         longPressTop.minimumPressDuration = 0.2
         self.topButton.addGestureRecognizer(longPressTop)
@@ -44,27 +43,19 @@ class LifeTrackerView: CustomView {
     }
     
     @objc func increaseLife() {
-        topButton.alpha = 1.0
         lifeTotal += 1
     }
     
     @objc func decreaseLife() {
-        bottomButton.alpha = 1.0
         lifeTotal -= 1
     }
     
     @IBAction func lifeTotalUpActions() {
         increaseLife()
-        UIView.animate(withDuration: 0.2) { [self] in
-            topButton.alpha = 0.1
-        }
     }
     
     @IBAction func lifeTotalDownActions() {
         decreaseLife()
-        UIView.animate(withDuration: 0.2) { [self] in
-            bottomButton.alpha = 0.1
-        }
     }
     
     @objc func longPress(sender: UILongPressGestureRecognizer) {
@@ -78,13 +69,22 @@ class LifeTrackerView: CustomView {
             break
         case .ended, .cancelled:
             longPressTimer?.invalidate()
-            UIView.animate(withDuration: 0.2) { [self] in
-                topButton.alpha = 0.1
-                bottomButton.alpha = 0.1
-            }
             break
         default:
             break
         }
+    }
+    
+    func setFont(with descrpitor: UIFontDescriptor) {
+        let size = lifeTotalLabel.font.pointSize
+        
+        lifeTotalLabel.font = UIFont.init(descriptor: descrpitor, size: size)
+        lifeTotalLabel.fixLabelSize(true)
+        lifeTotalLabel.fitFontForSize(minFontSize: 10.0, maxFontSize: 200.0, accuracy: 1.0)
+    }
+    
+    func setTextColor(color: UIColor) {
+        lifeTotalLabel.textColor = color
+        bottomImage.tintColor = color
     }
 }

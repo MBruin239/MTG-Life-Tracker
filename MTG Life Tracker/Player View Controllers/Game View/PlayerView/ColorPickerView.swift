@@ -83,4 +83,34 @@ extension UIColor {
 
         return (red, green, blue, alpha)
     }
+    
+    enum Brightness {
+        case light, medium, dark, transparent
+
+        private enum Threshold {
+            static let transparent: CGFloat = 0.1
+            static let light: CGFloat = 0.75
+            static let dark: CGFloat = 0.38
+        }
+
+        init(brightness: CGFloat, alpha: CGFloat) {
+            if alpha < Threshold.transparent {
+                self = .transparent
+            } else if brightness > Threshold.light {
+                self = .light
+            } else if brightness < Threshold.dark {
+                self = .dark
+            } else {
+                self = .medium
+            }
+        }
+    }
+
+    var brightness: Brightness {
+        var b: CGFloat = 0
+        var a: CGFloat = 0
+        let uiColor = self
+        uiColor.getHue(nil, saturation: nil, brightness: &b, alpha: &a)
+        return .init(brightness: b, alpha: a)
+    }
 }
